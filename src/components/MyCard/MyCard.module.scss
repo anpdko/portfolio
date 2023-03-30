@@ -1,0 +1,145 @@
+.my_card {
+   width: 300px;
+   background: var(--color-box);
+   box-shadow: 1px 0px 14px var(--color-shadow);
+   border-radius: 35px;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   align-items: center;
+   justify-content: center;
+
+   .avatar {
+      width: 100%;
+      border-radius: 25px;
+   }
+
+   .list_info {
+      max-width: 220px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin: 0;
+      gap: 15px;
+
+      li {
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         cursor: pointer;
+
+         i {
+            color: var(--color-blue);
+         }
+
+         .bi_geo {
+            font-size: 28px;
+         }
+
+         .bi_telephone {
+            font-size: 22px;
+            padding: 0 2px;
+         }
+      }
+   }
+
+   .list_social {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 10px;
+      margin-top: 15px;
+
+      .icon {
+         transition: all 0.3s;
+         border-radius: 10px;
+
+         div{
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            img {
+               width: 25px;
+               user-select: none;
+            }
+         }
+
+         .telegram {
+            border: 2px solid rgba(3, 155, 229, 1);
+         }
+   
+         .git {
+            border: 2px solid rgba(92, 107, 192, 1);
+         }
+   
+         .mail {
+            border: 2px solid rgb(201, 85, 76);
+         }
+   
+         .linkedin {
+            border: 2px solid rgba(0, 119, 181, 1);
+         }
+      }
+
+      .icon:hover{
+         transform: scale(1.05);
+         transition: all 0.3s;
+         box-shadow: 0 7px 14px var(--color-shadow);
+      }
+      .icon:active{
+         transform: scale(0.98);
+         box-shadow: 0 1px 3px var(--color-shadow);
+      }
+      
+   }
+}
+
+
+
+/**
+* The "shine" element
+*/
+
+.icon {
+   position: relative;
+   overflow: hidden;
+} 
+
+.icon:after {
+   cursor: pointer;
+   content: "";
+   height: 200%;
+   left: -230%;
+   opacity: 0;
+   position: absolute;
+   top: -20%;
+   transform: rotate(-30deg);
+   width: 200%;
+   background: rgba(255, 255, 255, 0.13);
+   background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.5) 92%, rgba(255, 255, 255, 0.0) 100%);
+}
+
+/* Hover state - trigger effect */
+
+.icon:hover:after {
+   left: -50%;
+   opacity: 1;
+   top: -50%;
+   transition-duration: 0.7s, 0.7s, 0.15s;
+   transition-property: left, top, opacity;
+   transition-timing-function: ease;
+}
+
+/* Active state */
+
+.icon:active:after {
+   opacity: 0;
+}

@@ -1,0 +1,60 @@
+@import "../../../assets/scss/variables.scss";
+
+.cont_input{
+   flex: 1;
+}
+
+.box_input{
+   display: flex;
+
+   svg {
+      position: absolute;
+      height: 100%;
+      font-size: 1.05rem;
+      color: var(--text-color) !important;
+   }
+
+   .icon{
+      position: relative;
+      left: 12px;
+   }  
+
+   .eye{
+      cursor: pointer;
+      position: relative;
+      right: 32px;
+   }
+}
+
+.input{
+   border-radius: $border-radius;
+   font-size: 1rem;
+   padding: 0.6rem 2.5rem 9px 0;
+   padding-left: 2.7rem;
+   color: var(--text-color);
+   background-color: var(--color-background-main);
+   border: 2px solid var(--color-grey);
+   width: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+   background-color: red !important;
+}
+
+
+.input:focus{
+   outline: none;
+   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.error{
+   color: $color-red;
+   margin: 5px 0 0 4px;
+   text-align: left;
+   font-size: 0.8rem;
+   font-weight: 700;
+}
