@@ -1,15 +1,13 @@
-import React from 'react'
 import s from './Home.module.scss'
 import Button from '../../components/UI/Button/Button';
 import mImg from '../../assets/images/icons/m.png'
 import eImg from '../../assets/images/icons/e.png'
 import rImg from '../../assets/images/icons/r.png'
 import nImg from '../../assets/images/icons/n.png'
-import hiImg from '../../assets/images/icons/hi.svg'
 import ukImg from '../../assets/images/icons/ukr.svg'
 
-
 const Home = () => {
+
    return (
       <div className={s.home}>
          <h1>

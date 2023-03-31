@@ -47,18 +47,19 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
 
 h1 { font-size: 4.7rem; }
 h2 { font-size: 2rem; }
+h3 { font-size: 2rem; }
 p { font-size: 1rem; }
-
-p.gray {
-  color: var(--color-gray);
-  font-weight: 500;
-}
 
 h4{
   font-size: 1rem;
   font-weight: 700;
 }
 
+
+p.gray {
+  color: var(--color-gray);
+  font-weight: 500;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -81,6 +82,8 @@ code {
   display: flex;
   align-items: center;
   padding: 30px 0;
+  min-height: 100vh;
+  max-height: calc(700px + 20vh);
 }
 
 .page_box {
@@ -97,3 +100,4 @@ code {
   align-items: flex-start;
   justify-content: center;
 }
+
