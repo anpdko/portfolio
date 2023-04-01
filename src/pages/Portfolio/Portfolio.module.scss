@@ -1,0 +1,19 @@
+
+
+.portfolio{
+   max-width: 800px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+
+   .cards{
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      margin: 40px 0 120px 0;
+   }
+
+   .cards > :nth-child(even){
+      flex-direction: row-reverse;
+   }
+}

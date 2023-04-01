@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Navigate, Routes, Route } from 'react-router-dom'
 import MyCard from "./components/MyCard/MyCard";
 import Home from "./pages/Home/Home";
@@ -15,26 +15,30 @@ let arrRoute = ['/', '/about', '/portfolio', '/contact']
 function App() {
 
   return (
-    <NavigateScroll arr={arrRoute} power={50}>
+    <NavigateScroll arr={arrRoute} power={20} >
+      <Routes>
+        <Route path='/*' element={(
           <div className="container main_container">
-        <Navbar />
-        <Theme />
-        <div className="my_card_box">
-          <MyCard />
-        </div>
-        <div className="page_box">
-          <div className="content_page_box">
-              <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/about' element={<About />} />
-                <Route path='/portfolio' element={<Portfolio />} />
-                <Route path='/contact' element={<Contact />} />
-                <Route path='/error' element={<Error />} />
-                <Route path="*" element={<Navigate to={'/'} />} />
-              </Routes>
+            <Navbar />
+            <Theme />
+            <div className="my_card_box">
+              <MyCard />
+            </div>
+            <div className="page_box">
+              <div className="content_page_box">
+                <Routes>
+                  <Route path='/' element={<Home/>}/>
+                  <Route path='/about' element={<About/>}/>
+                  <Route path='/portfolio' element={<Portfolio/>}/>
+                  <Route path='/contact' element={<Contact/>} />
+                </Routes>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        )} />
+        <Route path='/error' element={<Error />} />
+        <Route path="*" element={<Navigate to={'/'} />} />
+      </Routes>
     </NavigateScroll>
   );
 }

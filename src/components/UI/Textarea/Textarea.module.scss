@@ -1,0 +1,25 @@
+
+
+.text{
+   background-color: var(--color-box);
+   border: 0;
+   outline: none;
+   font-size: 1rem;
+   box-shadow: 0 0 var(--size-shadow) var(--color-shadow);
+   border-radius: calc(var(--border-radius-small)/2);
+   padding: 15px 20px;
+   font-weight: 500;
+   border: 2px solid transparent;
+   color: var(--color-font);
+   resize: none;
+   box-sizing: border-box;
+   overflow-y: scroll;
+   scrollbar-width: thin;
+   scrollbar-color: gray lightgray;
+   transition: 0.3s;
+}
+
+.text:focus{
+   transition: 0.3s;
+   border: 2px solid var(--color-scroll);
+}

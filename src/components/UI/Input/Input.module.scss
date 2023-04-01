@@ -1,60 +1,41 @@
-@import "../../../assets/scss/variables.scss";
-
-.cont_input{
-   flex: 1;
-}
 
 .box_input{
-   display: flex;
-
-   svg {
-      position: absolute;
-      height: 100%;
-      font-size: 1.05rem;
-      color: var(--text-color) !important;
-   }
+   position: relative;
+   width: 100%;
 
    .icon{
-      position: relative;
-      left: 12px;
-   }  
+      position: absolute;
+      top:0;
+      bottom: 0;
+      left: 0;
+      width: 3rem;
 
-   .eye{
-      cursor: pointer;
-      position: relative;
-      right: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i{
+         color: var(--color-gray);
+         font-size: 1.5rem;
+         z-index: 1;
+      }
    }
-}
+   .input{
+      background-color: var(--color-box);
+      border: 0;
+      outline: none;
+      font-size: 1rem;
+      box-shadow: 0 0 var(--size-shadow) var(--color-shadow);
+      border-radius: calc(var(--border-radius-small)/2);
+      padding: 15px 20px;
+      font-weight: 500;
+      border: 2px solid transparent;
+      color: var(--color-font);
+      box-sizing: border-box;
+      transition: 0.3s;
+   }
 
-.input{
-   border-radius: $border-radius;
-   font-size: 1rem;
-   padding: 0.6rem 2.5rem 9px 0;
-   padding-left: 2.7rem;
-   color: var(--text-color);
-   background-color: var(--color-background-main);
-   border: 2px solid var(--color-grey);
-   width: 100%;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:focus {
-    transition: background-color 600000s 0s, color 600000s 0s;
-}
-input[data-autocompleted] {
-   background-color: red !important;
-}
-
-
-.input:focus{
-   outline: none;
-   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-}
-
-.error{
-   color: $color-red;
-   margin: 5px 0 0 4px;
-   text-align: left;
-   font-size: 0.8rem;
-   font-weight: 700;
+   .input:focus{
+      border: 2px solid var(--color-scroll);
+      transition: 0.3s;
+   }
 }

@@ -5,11 +5,19 @@ import eImg from '../../assets/images/icons/e.png'
 import rImg from '../../assets/images/icons/r.png'
 import nImg from '../../assets/images/icons/n.png'
 import ukImg from '../../assets/images/icons/ukr.svg'
+import { useGsapFrom } from '../../hooks/useGsap'
+import { useSelector } from 'react-redux';
+import { RootState } from '../../store/store';
 
 const Home = () => {
+   const {directionScroll} = useSelector((state:RootState) => state.gsap)
+
+   const refHome = useGsapFrom({
+      opacity: 0, y: 150 * directionScroll
+   })
 
    return (
-      <div className={s.home}>
+      <div className={s.home} ref={refHome}>
          <h1>
             Front-End React Developer
             <span className={s.hi_box}>

@@ -1,0 +1,20 @@
+
+
+.contact{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 20px;
+   max-width: 800px;
+   width: 100%;
+
+
+   .email{
+      min-width: 400px;
+   }
+
+   .letter{
+      width: 100%;
+      min-height: 340px;
+   }
+}

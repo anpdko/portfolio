@@ -7,11 +7,10 @@
    align-items: center;
    justify-content: center;
    gap: 8px;
-   border-radius: 10px;
+   border-radius: calc(var(--border-radius-small)/2);
    padding: 15px 30px;
    font-weight: 700;
    user-select: none;
-   color: 1rem;
    z-index: 1;
    cursor: pointer;
    transition: linear 0.2s;
@@ -23,7 +22,7 @@
 
 .btn:hover{
    transition: linear 0.3s;
-   box-shadow: 0 7px 14px var(--color-shadow);
+   box-shadow: 0 7px var(--size-shadow) var(--color-shadow);
 }
 
 .btn:active{

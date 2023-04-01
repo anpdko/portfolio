@@ -1,6 +1,7 @@
 
 
 .navbar{
+   z-index: 20;
    position: fixed;
    right: 50px;
    height: 100vh;
@@ -10,14 +11,21 @@
 
    .menu{
       background: var(--color-box);
-      box-shadow: -1px 0px 14px var(--color-shadow);
-      border-radius: 99px;
-      padding: 15px;
+      box-shadow: -1px 0px var(--size-shadow) var(--color-shadow);
+      border-radius: var(--border-radius-main);
       margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 23px;
+      align-items: center;
+      padding: 30px 18px;
+
       li{
          width: 35px;
-         padding: 10px 0;
+         height: 35px;
          list-style: none;
+         
          img{
             width: 100%;
          }
@@ -37,3 +45,44 @@
    transform: scale(0.98);
    transition: all 0.2s;
 }
+
+.icon.active{
+   transform: scale(1.2);
+}
+
+
+.icon.active{
+   position: relative;
+   z-index: 5;
+}
+.icon.active::after,
+.icon.active::before {
+   content: '';
+   position: absolute;
+   border: 2px solid var(--color-gray);
+   opacity: 0;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   border-radius: 50%;
+   animation: pulse 0.9s linear;
+   z-index: -1;
+}
+.icon.active::after{
+   animation-delay: 0.3s;
+}
+
+@keyframes pulse {
+   0% {
+     transform: scale(1);
+     opacity: 0;
+   }
+   40% {
+     opacity: 0.3;
+   }
+   100% {
+     transform: scale(1.7);
+     opacity: 0;
+   }
+ }

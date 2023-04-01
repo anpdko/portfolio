@@ -1,6 +1,7 @@
 
 
 .theme{
+  z-index: 21;
   cursor: pointer;
   position: fixed;
   top: 50px;
@@ -11,7 +12,7 @@
   align-items: center;
   justify-content: center;
   background: var(--color-box);
-  box-shadow: -1px 1px 14px var(--color-shadow);
+  box-shadow: -1px 1px var(--size-shadow) var(--color-shadow);
   border-radius: 99px;
 }
 

@@ -3,6 +3,9 @@
 
 :root{
   --color-blue: #1877F2;
+  --border-radius-main: 25px;
+  --border-radius-small: 20px;
+  --size-shadow: 14px;
 }
 
 
@@ -13,6 +16,7 @@
   --color-gray: #8E8E8E;
   --color-font: #2D2E32;
   --color-hi: #2D2E32;
+  --color-scroll: #e6e6e6;
 }
 
 :root[data-theme="dark"] {
@@ -22,6 +26,7 @@
   --color-gray: #BEBEBE;
   --color-font: #ededed;
   --color-hi: #BEBEBE;
+  --color-scroll: #292a33;
 }
 
 
@@ -35,9 +40,6 @@ body {
   margin: 0;
   background: var(--color-background);
   color: var(--color-text);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-font);
@@ -47,12 +49,16 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; }
 
 h1 { font-size: 4.7rem; }
 h2 { font-size: 2rem; }
-h3 { font-size: 2rem; }
-p { font-size: 1rem; }
+h3 { font-size: 1.4rem; }
+p { font-size: 1rem; font-weight: 500; }
 
 h4{
   font-size: 1rem;
   font-weight: 700;
+}
+
+h4.blue{
+  color: var(--color-blue);
 }
 
 
@@ -67,14 +73,14 @@ code {
 }
 
 .container {
-  max-width: 1380px;
+  max-width: 1540px;
   padding: 0 30px;
   margin: 0 auto;
 }
 
 .main_container {
   display: flex;
-  gap: 80px;
+  gap: 130px;
 }
 
 .my_card_box {
@@ -101,3 +107,21 @@ code {
   justify-content: center;
 }
 
+/* Works on Chrome, Edge, and Safari */
+
+*:not(textarea)::-webkit-scrollbar{
+  width: 0;
+  opacity: 0;
+}
+
+/* Общий стиль для скролла */
+textarea::-webkit-scrollbar {
+  width: 1rem;
+  background-color: transparent;
+}
+
+/* Стиль ползунка */
+textarea::-webkit-scrollbar-thumb {
+  background-color: var(--color-scroll);
+  border-radius: 20px;
+}
