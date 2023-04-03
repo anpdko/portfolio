@@ -7,7 +7,7 @@ export interface IGsap {
 }
 
 const initialState: IGsap = { 
-   directionScroll: 1
+   directionScroll: -1
 }
 
 export const gsapSlice = createSlice({

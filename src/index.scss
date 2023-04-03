@@ -13,7 +13,7 @@
   --color-background: #f6f7fc;
   --color-box: #fafcff;
   --color-shadow: rgba(0, 0, 0, 0.2);
-  --color-gray: #8E8E8E;
+  --color-gray: #616161;
   --color-font: #2D2E32;
   --color-hi: #2D2E32;
   --color-scroll: #e6e6e6;
@@ -88,18 +88,20 @@ code {
   display: flex;
   align-items: center;
   padding: 30px 0;
-  min-height: 100vh;
-  max-height: calc(700px + 20vh);
+  max-height: calc(700px + 15vh);
 }
 
 .page_box {
   box-sizing: border-box;
   min-height: 100vh;
   width: 100%;
-  padding-top: 20vh;
+  display: flex;
+  align-items: center;
 }
 
 .content_page_box {
+  padding: 100px 0;
+  width: 100%;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -124,4 +126,51 @@ textarea::-webkit-scrollbar {
 textarea::-webkit-scrollbar-thumb {
   background-color: var(--color-scroll);
   border-radius: 20px;
+}
+
+
+
+
+@media screen and (max-width: 1600px){
+  html {
+    font-size: 16px;
+  }
+  .container {
+    max-width: 1240px;
+    padding: 0 120px 0 30px;
+  }
+  .main_container{
+    gap: 60px;
+  }
+  .my_card_box {
+    max-height: calc(700px + 10vh);
+  }
+}
+
+@media screen and (max-width: 1280px){
+
+}
+
+@media screen and (max-width: 1024px){
+
+}
+
+@media screen and (max-width: 960px){
+
+}
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 640px){
+
+}
+
+@media screen and (max-width: 480px){
+
+}
+
+@media screen and (max-width: 320px){
+
 }

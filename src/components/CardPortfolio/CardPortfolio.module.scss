@@ -4,7 +4,7 @@
    background: var(--color-box);
    box-shadow: 1px 0px var(--size-shadow) var(--color-shadow);
    border-radius: var(--border-radius-main);
-   padding: 20px;
+   padding: 1.1rem;
    display: grid;
    display: flex;
    // flex-wrap: wrap;
@@ -12,7 +12,7 @@
 
    .box_img_site{
       flex: 1 0 50%;
-      min-height: 280px;
+      min-height: 15.5rem;
       display: flex;
       align-items: center;
       
@@ -47,7 +47,7 @@
       .links{
          display: flex;
          justify-content: center;
-         gap: 40px;
+         gap: 2.2rem;
 
          a{
             display: flex;
