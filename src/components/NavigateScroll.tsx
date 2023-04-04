@@ -83,9 +83,6 @@ const NavigateScroll = ({ arr, power = 20, delay = 500, distance = 5, children }
 
 
 
-
-
-
   useEffect(() => {
     if (isNavigate) {
       window.scrollTo(0, 0);
@@ -95,7 +92,8 @@ const NavigateScroll = ({ arr, power = 20, delay = 500, distance = 5, children }
         window.removeEventListener('scroll', handleScroll);
       }, 700)
     }
-  }, [pathname, isNavigate])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname])
 
 
   return (
