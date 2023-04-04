@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { Navigate, Routes, Route } from 'react-router-dom'
 import MyCard from "./components/MyCard/MyCard";
 import Home from "./pages/Home/Home";

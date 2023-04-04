@@ -58,9 +58,6 @@ const NavigateScroll = ({ arr, power = 20, delay = 500, distance = 5, children }
 
 
 
-
-
-
   let yDown: number | null = null;
 
   // функция обработки начала свайпа
@@ -98,7 +95,7 @@ const NavigateScroll = ({ arr, power = 20, delay = 500, distance = 5, children }
         window.removeEventListener('scroll', handleScroll);
       }, 700)
     }
-  }, [pathname])
+  }, [pathname, isNavigate])
 
 
   return (

@@ -1,6 +1,4 @@
-import React, { useRef, useEffect } from 'react'
-import { gsap } from "gsap";
-
+import React from 'react'
 import s from './Navbar.module.scss'
 import home from '../../assets/images/icons/home.png'
 import about from '../../assets/images/icons/about.png'

@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react'
+import React from 'react'
 import s from './CardPortfolio.module.scss'
 import site1Img from '../../assets/images/site1.png'
 
