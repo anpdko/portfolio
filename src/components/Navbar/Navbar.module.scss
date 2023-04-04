@@ -97,3 +97,21 @@
       right: 25px;
    }
 }
+
+@media screen and (max-width: 540px){ // mobile devices
+
+   .navbar {
+      right: 0;
+      left: 0;
+      height: auto;
+      bottom: 0;
+
+      .menu {
+         width: 100%;
+         margin: 7px 10px;
+         flex-direction: row;
+         gap: 1.7rem;
+         padding: 1rem;
+      }
+   }
+ }

@@ -22,13 +22,12 @@ const NavigateScroll = ({ arr, power = 20, delay = 500, distance = 5, children }
   const [isNavigate, setIsNavigate] = useState(false)
 
 
-  function handleWheel(event: React.WheelEvent) {
-    // console.log(event.deltaY)
-    if (!isNavigate && Math.abs(event.deltaY) > power) {
+  const pagesScroll = (diff:number) => {
+    if (!isNavigate && Math.abs(diff) > power) {
       setIsNavigate(true)
       const scrollHeight = document.documentElement.scrollHeight;
       const scrollBottom = window.innerHeight;
-      if (event.deltaY > 0 && (scrollHeight - scrollBottom < 20 || isPageBottom)) {
+      if (diff > 0 && (scrollHeight - scrollBottom < 20 || isPageBottom)) {
         for (let i = 0; i < arr.length - 1; i++) {
           if (arr[i] === pathname) {
             dispatch(setDirectionScroll(1))
@@ -37,7 +36,7 @@ const NavigateScroll = ({ arr, power = 20, delay = 500, distance = 5, children }
           }
         }
       }
-      if (event.deltaY < 0 && isPageTop) {
+      if (diff < 0 && isPageTop) {
         for (let i = arr.length - 1; i > 0; i--) {
           if (arr[i] === pathname) {
             dispatch(setDirectionScroll(-1))
@@ -52,9 +51,43 @@ const NavigateScroll = ({ arr, power = 20, delay = 500, distance = 5, children }
     }
   }
 
+  function handleWheel(event: React.WheelEvent) {
+    // console.log(event.deltaY)
+    pagesScroll(event.deltaY)
+  }
+
+
+
+
+
+
+  let yDown: number | null = null;
+
+  // функция обработки начала свайпа
+  function handleTouchStart(event:React.TouchEvent) {
+    yDown = event.touches[0].clientY;
+  }
+  // функция обработки окончания свайпа
+  function handleTouchEnd() {
+    yDown = null;
+  }
+
+  function handleTouchMove(event:React.TouchEvent) {
+    if (!yDown) { return;}
+    let yUp = event.touches[0].clientY;
+    let yDiff = yDown - yUp;
+    console.log(yDiff)
+    pagesScroll(yDiff);
+  }
+
   const handleScroll = () => {
     document.documentElement.scrollTo(0, 0);
   }
+
+
+
+
+
 
   useEffect(() => {
     if (isNavigate) {
@@ -69,7 +102,13 @@ const NavigateScroll = ({ arr, power = 20, delay = 500, distance = 5, children }
 
 
   return (
-    <div ref={pagesRef} onWheel={handleWheel}>
+    <div
+      ref={pagesRef}
+      onWheel={handleWheel}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}>
+
       {children}
     </div>
   );

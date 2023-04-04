@@ -5,9 +5,7 @@
    box-shadow: 1px 0px var(--size-shadow) var(--color-shadow);
    border-radius: var(--border-radius-main);
    padding: 1.1rem;
-   display: grid;
    display: flex;
-   // flex-wrap: wrap;
    gap: 30px;
 
    .box_img_site{
@@ -73,6 +71,16 @@
                }                
             }
          }
+      }
+   }
+}
+
+@media screen and (max-width: 1280px){
+   .card_portfolio{
+      flex-direction: column-reverse;
+      .box_img_site{
+         flex: 1 0 auto;
+         min-height: auto;
       }
    }
 }

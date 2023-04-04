@@ -25,3 +25,27 @@
       }
    }
 }
+
+@media screen and (max-width: 768px){
+   .about{
+      align-items: center;
+      text-align: center;
+      .row_skils{
+         justify-content: center;
+         flex-wrap: wrap;
+         ul{
+            list-style: none;
+            padding: 0;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 540px){
+   .about{
+      .row_skils{
+         flex-direction: column;
+         align-items: center;
+      }
+   }
+}

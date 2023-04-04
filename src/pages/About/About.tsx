@@ -21,7 +21,7 @@ const About = () => {
          <p className='gray'>Зараз я шукаю нагоди приєднатися до професійної команди, де зможу вдосконалювати навички разом з ними. Я готовий до навчання, прагну до правильного написання коду та архітектури додатків. Сподіваюся, що мої роботи на цьому сайті вам сподобаються та покажуть мій підхід до розробки.</p>
 
          <div className={s.row_skils}>
-            <div>
+            <div className={s.col_skils}>
                <h4 className="blue">SKILLS</h4>
                <ul>
                   <li>HTML, CSS, SCSS</li>
@@ -33,7 +33,7 @@ const About = () => {
                   <li>Git, Jira</li>
                </ul>
             </div>
-            <div>
+            <div className={s.col_skils}>
                <h4 className="blue">EXTRA SKILLS</h4>
                <ul>
                   <li>Express.js, Postman</li>

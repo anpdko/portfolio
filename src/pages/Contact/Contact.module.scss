@@ -18,3 +18,14 @@
       min-height: 19rem;
    }
 }
+
+@media screen and (max-width: 768px){
+   .contact{
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      .email{
+         width: 100%;
+      }
+   }
+}
