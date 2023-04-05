@@ -16,6 +16,10 @@ const About = () => {
       opacity: 0, y: 150 * directionScroll
    })
 
+   if(refAbout?.current){
+      return <div></div>
+   }
+
    return (
       <div className={s.about} ref={refAbout}>
          <h4 className='blue'>{t("ABOUT ME")}</h4>

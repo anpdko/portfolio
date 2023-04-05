@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import { gsap, Power3 } from "gsap";
 
 interface IGsapSettings {
@@ -6,17 +6,19 @@ interface IGsapSettings {
 }
 
 
-function useGsapFrom(settings: IGsapSettings){
+function useGsapFrom(settings: IGsapSettings) {
   const boxRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const box = boxRef.current;
-    gsap.from(box, {
-      delay: 0.2,
-      duration: 0.8,
-      ease: Power3.easeInOut, 
-      ...settings
-   });
+  useLayoutEffect(() => {
+    if (boxRef?.current) {
+      const box = boxRef.current;
+      gsap.from(box, {
+        // delay: 0.2,
+        duration: 0.6,
+        ease: Power3.easeInOut,
+        ...settings
+      });
+    }
   }, [settings]);
 
   return boxRef;
