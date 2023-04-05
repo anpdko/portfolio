@@ -83,12 +83,24 @@ code {
   gap: 130px;
 }
 
+.my_card_settings{
+  position: fixed;
+  top: 50px;
+  right: 55px;
+  display: flex;
+  gap: 10px;
+  z-index: 23;
+}
+
 .my_card_box {
   box-sizing: border-box;
   display: flex;
   align-items: center;
   padding: 30px 0;
-  max-height: calc(700px + 20vh);
+  height: 700px;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
 }
 
 .page_box {

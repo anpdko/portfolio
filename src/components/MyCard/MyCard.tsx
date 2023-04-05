@@ -1,5 +1,6 @@
 import React from 'react'
 import s from './MyCard.module.scss'
+import { useTranslation } from 'react-i18next';
 import fotoImg from '../../assets/images/foto.png'
 import mailImg from '../../assets/images/icons/mail.png'
 import gitImg from '../../assets/images/icons/git.png'
@@ -9,16 +10,17 @@ import { useGsapFrom } from '../../hooks/useGsap'
 
 
 const MyCard = () => {
+   const { t } = useTranslation();
    const cardRef = useGsapFrom({ opacity: 0, x: -100 });
 
    return (
       <div className={s.my_card} ref={cardRef}>
          <img className={s.avatar} src={fotoImg} alt="avatar" />
-         <h2>Andrii Priadko</h2>
+         <h2>{t("Andrii Priadko")}</h2>
          <ul className={s.list_info}>
             <li>
                <i className={`bi bi-geo-alt-fill ${s.bi_geo}`}></i>
-               <p className='gray'>Ukraine. Zaporizhzhia. Ready to relocate</p>
+               <p className='gray'>{t("Ukraine. Zaporizhzhia. Ready to relocate")}</p>
             </li>
             <li>
                <i className={`bi bi-telephone-fill ${s.bi_telephone}`} ></i>

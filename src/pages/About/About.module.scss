@@ -7,22 +7,28 @@
    gap: 1.1rem;
 
    h3{
-      max-width: 23rem;
+      max-width: 30rem;
+   }
+
+   .filter_skills{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      span{
+         background: var(--color-box);
+         border: 1px solid var(--color-blue);
+         box-shadow: 1px 0px calc(var(--size-shadow)/3) var(--color-shadow);
+         border-radius: var(--border-radius-main);
+         padding: 0.4rem 0.8rem;
+         cursor: pointer;
+      }
    }
 
    .row_skils{
       display: flex;
-      gap: 1.6rem;
-      margin-top: 10px;
-
-      ul{
-         padding: 0 20px;
-
-         li{
-            color: var(--color-gray);
-            margin-bottom: 0.3rem;
-         }
-      }
+      flex-wrap: wrap;
+      gap: 10px; 
    }
 }
 
