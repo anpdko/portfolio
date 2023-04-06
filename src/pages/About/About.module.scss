@@ -26,14 +26,13 @@
       }
       span.active{
          background-color: var(--color-blue);
-         color: var(--color-background);
+         color: #fff;
       }
    }
 
    .row_skils{
       display: flex;
       flex-wrap: wrap;
-      color: var(--color-gray);
       font-weight: 500;
       margin-top: 10px;
       font-size: 1rem;
@@ -43,6 +42,13 @@
       span:not(:last-child)::after {
          content: "•";
          margin-left: 0.6rem;
+      }
+      span{
+         color: var(--color-gray);
+      }
+      span.active{
+         color: var(--color-font);
+         font-weight: 700;
       }
    }
 }

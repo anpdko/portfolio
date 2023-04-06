@@ -5,7 +5,7 @@ import { useGsapFrom } from '../../hooks/useGsap'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store/store';
 import { listData, filterData } from './data';
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 
 const AboutSkills = () => {
@@ -14,38 +14,45 @@ const AboutSkills = () => {
    const [filterId, setfilterId] = useState(0)
 
    useEffect(() => {
-      setFiltered(listData.filter(item => {
-         return filterData[filterId].list.includes(item.id)
-      }))
+      const newArr = []
+      for (let item of listData) {
+         if (filterData[filterId].list.includes(item.id)) {
+            newArr.unshift(item)
+         }
+         else {
+            newArr.push(item)
+         }
+      }
+
+      setFiltered(newArr)
    }, [filterId])
 
    return (
       <React.Fragment>
          <div className={s.filter_skills}>
             {filterData.map(item =>
-               <span 
-                  onClick={() => setfilterId(item.id)} 
+               <span
+                  onClick={() => setfilterId(item.id)}
                   key={item.id}
-                  className={item.id === filterId?s.active:""}
+                  className={item.id === filterId ? s.active : ""}
                >
-                     #{t(item.title)}
+                  #{t(item.title)}
                </span>
             )}
          </div>
          <motion.div layout className={s.row_skils}>
             {filtered.map((item) =>
-               <AnimatePresence>
-                  <motion.span
-                     animate={{ opacity: 1, scale: 1}}
-                     initial={{ opacity: 0, scale: 0}}
-                     exit={{ opacity: 0, scale: 0}}
-                     transition={{duration: 0.3}}
-                     layout
-                     key={item.id}
-                  >
-                     {item.name}
-                  </motion.span>
-               </AnimatePresence>
+               <motion.span
+                  className={filterData[filterId].list.includes(item.id)?s.active:''}
+                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  layout
+                  key={item.id}
+               >
+                  {t(item.name)}
+               </motion.span>
             )}
          </motion.div>
       </React.Fragment>
