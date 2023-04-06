@@ -1,13 +1,17 @@
 
 
 .about{
-   max-width: 700px;
+   max-width: 45rem;
    display: flex;
    flex-direction: column;
    gap: 1.1rem;
 
    h3{
       max-width: 30rem;
+   }
+   p{
+      text-align: justify;
+      text-indent:1rem;
    }
 
    .filter_skills{
@@ -57,11 +61,6 @@
    .about{
       align-items: center;
       text-align: center;
-
-      p{
-         text-align: justify;
-         text-indent: 2rem;
-      }
 
       .filter_skills{
          align-items: center;
