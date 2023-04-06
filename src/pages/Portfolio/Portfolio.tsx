@@ -12,7 +12,7 @@ const Portfolio = () => {
    const {directionScroll} = useSelector((state:RootState) => state.gsap)
    
    const refPortfolio = useGsapFrom({
-      opacity: 0, y: 150 * directionScroll, duration: 0.8
+      opacity: 0, y: 150 * directionScroll
    })
 
    return (

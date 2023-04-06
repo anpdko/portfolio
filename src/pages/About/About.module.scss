@@ -22,13 +22,28 @@
          border-radius: var(--border-radius-main);
          padding: 0.3rem 0.7rem;
          cursor: pointer;
+         user-select: none;
+      }
+      span.active{
+         background-color: var(--color-blue);
+         color: var(--color-background);
       }
    }
 
    .row_skils{
       display: flex;
       flex-wrap: wrap;
-      gap: 10px; 
+      color: var(--color-gray);
+      font-weight: 500;
+      margin-top: 10px;
+      font-size: 1rem;
+      gap: 0.6rem;
+      min-height: 120px;
+
+      span:not(:last-child)::after {
+         content: "•";
+         margin-left: 0.6rem;
+      }
    }
 }
 

@@ -118,25 +118,26 @@
          text-align: center;
 
          .hi_box {
+            display: none;
 
-            .hi {
-               padding-bottom: 1rem;
-               width: 3rem;
-            }
+            // .hi {
+            //    padding-bottom: 1rem;
+            //    width: 3rem;
+            // }
    
-            .box_hi_text {
-               position: absolute;
-               top: 0.1rem;
-               left: 0.5rem;
-               right: 0;
-               display: flex;
-               align-items: flex-start;
-               justify-content: center;
+            // .box_hi_text {
+            //    position: absolute;
+            //    top: 0.1rem;
+            //    left: 0.5rem;
+            //    right: 0;
+            //    display: flex;
+            //    align-items: flex-start;
+            //    justify-content: center;
    
-               .hi_text {
-                  font-size: 1.1rem;
-               }
-            }
+            //    .hi_text {
+            //       font-size: 1.1rem;
+            //    }
+            // }
          }
       }
    }

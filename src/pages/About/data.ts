@@ -1,16 +1,10 @@
 
-const filter = [
-   { id: 0, title: 'web', list: [] },
-   { id: 1, title: 'react', list: [] },
-   { id: 3, title: 'back-end', list: [] },
-   { id: 2, title: 'social', list: [] },
-   { id: 4, title: 'design', list: [] },
-   { id: 5, title: 'more', list: [] },
-]
+export interface IListData {
+   id: number,
+   name: string,
+}
 
-
-
-const list = [
+const listData:IListData[] = [
    { id: 0, name: 'HTML' },
    { id: 1, name: 'CSS' },
    { id: 2, name: 'SCSS' },
@@ -40,4 +34,28 @@ const list = [
 ]
 
 
-export { list, filter }
+
+export interface IFilterData {
+   id: number,
+   title: string,
+   list: number[]
+}
+
+
+const allFolter = [];
+for(let i = 0; i < listData.length; i++) {
+   allFolter.push(i);
+}
+
+const filterData:IFilterData[] = [
+   { id: 0, title: 'all', list: allFolter },
+   { id: 1, title: 'web', list: [0, 1, 2, 3, 4, 5, 10] },
+   { id: 2, title: 'react', list: [4, 5, 6, 7, 8, 9, 10] },
+   { id: 3, title: 'back-end', list: [15, 16, 17, 18] },
+   { id: 4, title: 'social', list: [11, 12, 13, 14, 19, 20] },
+   { id: 5, title: 'design', list: [22, 23] },
+   { id: 6, title: 'more', list: [24, 25] },
+]
+
+
+export { listData, filterData }
