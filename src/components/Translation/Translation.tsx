@@ -3,7 +3,11 @@ import s from './Translation.module.scss'
 import useLocalStorage from '../../hooks/useLocalStorage';
 import i18n from '../../translation/i18n'
 
-const Translation = () => {
+interface ITranslation {
+    className?:string
+  }
+
+const Translation = ({ className }:ITranslation) => {
    const [language, setLanguage] = useLocalStorage('language', 'uk');
 
    const handleLenguageChange = () => {
@@ -17,7 +21,7 @@ const Translation = () => {
   };
 
    return (
-      <div onClick={handleLenguageChange} className={s.translation}>
+      <div onClick={handleLenguageChange} className={`${s.translation} ${className}`}>
             {language === 'uk' ? 'EN' : 'UK'}
       </div>
    );

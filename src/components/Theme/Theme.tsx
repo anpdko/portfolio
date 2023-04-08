@@ -5,11 +5,11 @@ import { RootState } from '../../store/store'
 import { setTheme } from '../../store/theme/themeSlice'
 import s from './Theme.module.scss'
 
-interface IThemeFC {
-  className?: 'dark' | 'light'
+interface ITheme {
+  className?:string
 }
 
-const Theme: FC<IThemeFC> = ({ className }) => {
+const Theme:FC<ITheme> = ({ className }) => {
   const { theme } = useSelector((state: RootState) => state.theme)
   const dispatch = useDispatch()
 
@@ -21,9 +21,9 @@ const Theme: FC<IThemeFC> = ({ className }) => {
   const handleChange = () => dispatch(setTheme(theme === 'dark' ? 'light' : 'dark'))
 
   return (
-    <div onClick={handleChange} className={s.theme}>
+    <div onClick={handleChange} className={`${s.theme} ${className}`}>
       <div
-        className={`${className} ${s.root} ${theme === 'dark' ? s.dark : s.light}`}
+        className={`${s.root} ${theme === 'dark' ? s.dark : s.light}`}
       />
     </div>
   )

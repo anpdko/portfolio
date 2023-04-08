@@ -17,9 +17,11 @@ const AboutSkills = () => {
       const newArr = []
       for (let item of listData) {
          if (filterData[filterId].list.includes(item.id)) {
-            newArr.unshift(item)
+            newArr.push(item)
          }
-         else {
+      }
+      for (let item of listData) {
+         if (!filterData[filterId].list.includes(item.id)) {
             newArr.push(item)
          }
       }
@@ -43,7 +45,7 @@ const AboutSkills = () => {
          <motion.div layout className={s.row_skils}>
             {filtered.map((item) =>
                <motion.span
-                  className={filterData[filterId].list.includes(item.id)?s.active:''}
+                  className={filterData[filterId].list.includes(item.id)?s.active:s.hide}
                   animate={{ opacity: 1 }}
                   initial={{ opacity: 0 }}
                   exit={{ opacity: 0 }}

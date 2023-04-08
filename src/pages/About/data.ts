@@ -42,8 +42,13 @@ export interface IFilterData {
    list: number[]
 }
 
+const allListData = []
+for (let i = 0; i < listData.length; i++){
+   allListData.push(i)
+}
+
 const filterData:IFilterData[] = [
-   { id: 0, title: 'all', list: [] },
+   { id: 0, title: 'all', list: allListData },
    { id: 1, title: 'web', list: [0, 1, 2, 3, 4, 5, 10] },
    { id: 2, title: 'react', list: [4, 5, 6, 7, 8, 9, 10] },
    { id: 3, title: 'back-end', list: [15, 16, 17, 18] },

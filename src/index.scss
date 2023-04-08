@@ -82,15 +82,6 @@ code {
   gap: 130px;
 }
 
-.my_card_settings{
-  position: fixed;
-  top: 50px;
-  right: 55px;
-  display: flex;
-  gap: 10px;
-  z-index: 23;
-}
-
 .my_card_box {
   box-sizing: border-box;
   display: flex;
@@ -156,10 +147,6 @@ textarea::-webkit-scrollbar-thumb {
   .my_card_box {
     max-height: calc(700px + 10vh);
   }
-  .my_card_settings {
-    top: 25px;
-    right: 25px;
-  }
 }
 
 @media screen and (max-width: 1280px){
@@ -200,10 +187,6 @@ textarea::-webkit-scrollbar-thumb {
   }
   .page_box {
     min-height: calc(100vh - 90px);
-  }
-  .my_card_settings {
-    top: 15px;
-    right: 15px;
   }
 }
 

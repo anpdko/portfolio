@@ -1,0 +1,42 @@
+
+
+.menu_btn{
+   position: fixed;
+   top: 50px;
+   right: 55px;
+   display: flex;
+   gap: 10px;
+   z-index: 23;
+
+   .menu{
+      overflow: hidden;
+      margin-right: -2rem;
+      padding-right: 2rem;
+
+      .open{
+         display: flex;
+         gap: 10px;
+         transition: all 1s ease;
+      }
+      .close{
+         display: flex;
+         gap: 10px;
+         transition: all 1s ease;
+         transform: translateX(120%);
+      }
+   }
+}
+
+@media screen and (max-width: 1600px){
+   .menu_btn {
+     top: 25px;
+     right: 25px;
+   }
+}
+
+@media screen and (max-width: 540px){ // mobile devices
+   .menu_btn {
+     top: 15px;
+     right: 15px;
+   }
+}
