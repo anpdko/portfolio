@@ -11,7 +11,8 @@
    .menu{
       overflow: hidden;
       margin-right: -2rem;
-      padding-right: 2rem;
+      margin-top: -2rem;
+      padding: 2rem;
 
       .open{
          display: flex;
@@ -22,7 +23,7 @@
          display: flex;
          gap: 10px;
          transition: all 1s ease;
-         transform: translateX(120%);
+         transform: translateX(150%);
       }
    }
 }
