@@ -5,6 +5,7 @@ import CardPortfolio from '../../components/CardPortfolio/CardPortfolio';
 import {useGsapFrom} from '../../hooks/useGsap'
 import {useSelector} from 'react-redux'
 import { RootState } from '../../store/store';
+import { portfolioData } from './data';
 
 
 const Portfolio = () => {
@@ -20,10 +21,10 @@ const Portfolio = () => {
          <h4 className='blue'>{t("PORTFOLIO")}</h4>
          <h3>{t("Each project is a unique piece of development🧩")}</h3>
          <div className={s.cards}>
-            <CardPortfolio/>
-            <CardPortfolio/>
-            <CardPortfolio/>
-            <CardPortfolio/>
+            {portfolioData.map((data) =>
+               <CardPortfolio key={data.id} data={data}/>
+            )}
+
          </div>
       </div>
    );

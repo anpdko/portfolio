@@ -1,33 +1,36 @@
 import React from 'react'
 import s from './CardPortfolio.module.scss'
-import site1Img from '../../assets/images/site1.png'
+import { IPortfolioCard } from "../../pages/Portfolio/data";
 
-const CardPortfolio = () => {
+interface ICardPortfolio {
+   data: IPortfolioCard
+}
+
+const CardPortfolio = ({data}:ICardPortfolio) => {
 
    return (
       <div className={s.card_portfolio}>
          <div className={s.contant}>
-            <h4>COINDOM</h4>
-            <p className='gray'>A car rental website is an online platform that allows users to rent cars for personal or business use. The website provides an interface for searching, comparing, and reserving cars.</p>
+            <h4>{data.title}</h4>
+            <p className='gray'>{data.description}</p>
             <div className={s.technologies}>
-               <p>React</p>
-               <p>SCSS</p>
-               <p>Express</p>
-               <p>Mongoose</p>
+               {data.technology.map((item) =>
+                  <p key={item}>{item}</p>
+               )}
             </div>
             <div className={s.links}>
-               <a href="https://www.google.com.ua" target="_blank" rel="noreferrer">
+               <a href={data.github} target="_blank" rel="noreferrer">
                   <span>CodeLive</span>
                   <i className="bi bi-github"></i>
                </a>
-               <a href="https://www.google.com.ua" target="_blank" rel="noreferrer">
+               <a href={data.link} target="_blank" rel="noreferrer">
                   <span>Demo</span>
                   {iconLink}
                </a>
             </div>
          </div>
          <div className={s.box_img_site}>
-            <img className={s.img_site} src={site1Img} alt="site1" />
+            <img className={s.img_site} src={data.gif} alt="site1" />
          </div>
       </div>
    );
