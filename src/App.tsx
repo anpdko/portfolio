@@ -9,6 +9,9 @@ import Error from "./pages/Error/Error";
 import Navbar from "./components/Navbar/Navbar";
 import NavigateScroll from "./components/NavigateScroll";
 import MenuBtn from "./components/MenuBtn/MenuBtn";
+import MenuMyCard from "./components/MenuMyCard/MenuMyCard";
+import Translation from './components/Translation/Translation';
+import Theme from './components/Theme/Theme';
 
 let arrRoute = ['/', '/about', '/portfolio', '/contact']
 
@@ -20,10 +23,16 @@ function App() {
         <Route path='/*' element={(
           <div className="container main_container">
             <Navbar />
-            <MenuBtn/>
-            <div className="my_card_box">
+
+            <MenuBtn>
+              <Translation/>
+              <Theme/>
+            </MenuBtn>
+
+            <MenuMyCard>
               <MyCard />
-            </div>
+            </MenuMyCard>
+            
             <div className="page_box">
               <div className="content_page_box">
                 <Routes>
