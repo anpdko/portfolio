@@ -32,12 +32,12 @@
    .open{
       transform: translateX(0) translateY(0) scale(1);
       opacity: 1;
-      transition: all 0.7s ease-out;
+      transition: all 0.5s ease-out;
    }
    .close{
       transform: translateX(-100%) translateY(-4%) scale(0.8);
       opacity: 0.7;
-      transition: all 0.7s ease-out;
+      transition: all 0.4s ease-in;
    }
 
 }
