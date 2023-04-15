@@ -2,14 +2,21 @@ import React from 'react'
 import s from './Button.module.scss'
 
 
-interface IButton {
-   children: any
-   className?: string
+interface ClickableButtonProps {
+   children: React.ReactNode;
+   className?: string;
+   type?: "submit" | "button";
+   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const Button = ({children, className, ...props}:IButton) => {
+interface SubmitButtonProps extends ClickableButtonProps {
+   type: "submit";
+}
+
+const Button = ({ children, className, type, onClick, ...props }: ClickableButtonProps | SubmitButtonProps) => {
    return (
-      <button {...props} 
+      <button {...props} type={type}
+         onClick={onClick}
          className={[s.btn, s.btn_fill, className].join(" ")}>
          {children}
       </button>

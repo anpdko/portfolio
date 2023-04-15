@@ -6,9 +6,11 @@ interface IInput{
    children?:any;
    type?:string;
    placeholder?:string;
+   value?: string; 
+   onChange?: React.ChangeEventHandler<HTMLInputElement>;
 } 
 
-const Input = ({className, children, type = 'text', placeholder,  ...props}:IInput) => {
+const Input = ({className, value, onChange, children, type = 'text', placeholder,  ...props}:IInput) => {
 
    return (
       <div className={styles.box_input}>
@@ -22,6 +24,8 @@ const Input = ({className, children, type = 'text', placeholder,  ...props}:IInp
             {...props} 
             className={`${styles.input} ${className}`} 
             type={type}
+            onChange={onChange}
+            value={value}
          />
 
       </div>
