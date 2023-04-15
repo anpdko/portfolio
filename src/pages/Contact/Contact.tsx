@@ -28,8 +28,8 @@ const SentMessage = () => {
 
       const templateParams = {
          to_name: 'Andrii',
-         from_name: youEmail,
-         message,
+         from_email: youEmail,
+         message_html: message,
       };
 
       emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, templateParams, YOUR_USER_ID)
