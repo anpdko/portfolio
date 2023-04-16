@@ -10,7 +10,7 @@
 
 
    .email{
-      min-width: 22rem;
+      min-width: 25rem;
    }
 
    .letter{
@@ -26,6 +26,7 @@
       align-items: center;
       .email{
          width: 100%;
+         min-width: auto;
       }
    }
 }

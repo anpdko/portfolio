@@ -12,6 +12,7 @@ import MenuBtn from "./components/MenuBtn/MenuBtn";
 import MenuMyCard from "./components/MenuMyCard/MenuMyCard";
 import Translation from './components/Translation/Translation';
 import Theme from './components/Theme/Theme';
+import TriangleElem from "./components/TriangleElem/TriangleElem";
 
 let arrRoute = ['/', '/about', '/portfolio', '/contact']
 
@@ -32,6 +33,8 @@ function App() {
             <MenuMyCard>
               <MyCard />
             </MenuMyCard>
+
+            <TriangleElem/>
             
             <div className="page_box">
               <div className="content_page_box">

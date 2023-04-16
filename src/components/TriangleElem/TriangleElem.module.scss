@@ -1,0 +1,45 @@
+
+.box{
+   position: absolute;
+
+   .top{
+      position: fixed;
+      overflow: hidden;
+      z-index: -1;
+      width: 19.5rem;
+      height: 18.5rem;
+      right: 0;
+      top: 0;
+      transform: rotateX();
+      .triangle{
+         right: -6rem;
+         top: -4rem;
+      }
+   }
+
+   .bottom{
+      position: fixed;
+      overflow: hidden;
+      z-index: -1;
+      width: 19.5rem;
+      height: 18.5rem;
+      left: 0;
+      bottom: 0;
+      transform: rotateX();
+      .triangle{
+         left: -5rem;
+         bottom: -3rem;
+      }
+   }
+
+   .triangle{
+      width: 19.5rem;
+      height: 18.5rem;
+      position: absolute;
+      transition: 0.2s;
+
+      path{
+         fill: var(--color-box);
+      }
+   }
+}

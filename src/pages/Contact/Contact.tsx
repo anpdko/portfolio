@@ -23,21 +23,34 @@ const SentMessage = () => {
    const placeholderEmail = t("Your email address...")
    const placeholderLetter = t("Write to me...")
 
-   function sendEmail() {
-      console.log(youEmail, message)
+   // Validate email
+   function validateEmail(email:string) {
+      var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+      return re.test(String(email).toLowerCase());
+   }
 
+   function sendEmail() {
       const templateParams = {
          to_name: 'Andrii',
          from_email: youEmail,
          message_html: message,
       };
 
-      emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, templateParams, YOUR_USER_ID)
-         .then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
+      setYouEmail("")
+      setMessage("")
+
+      if(message.length > 5 && validateEmail(youEmail)) {
+         emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, templateParams, YOUR_USER_ID)
+         .then((res) => {
+            console.log('SUCCESS!', res.status, res.text);
+            alert("SUCCESS!")
          }, (error) => {
             console.log('FAILED...', error);
          });
+      }
+      else{
+         alert("Заполните поля!")
+      }
    }
 
    return (
