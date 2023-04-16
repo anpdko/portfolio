@@ -9,7 +9,8 @@
 
    .menu {
       background: var(--color-box);
-      box-shadow: -1px 0px var(--size-shadow) var(--color-shadow);
+      box-shadow: -1px 0px var(--size-shadow) var(--color-shadow), 
+      inset 0px 0px var(--size-inset-shadow) var(--color-inset-shadow);
       border-radius: var(--border-radius-main);
       margin: 0;
       display: flex;

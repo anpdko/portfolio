@@ -8,6 +8,7 @@
    justify-content: center;
    gap: 8px;
    border-radius: calc(var(--border-radius-small)/2);
+   box-shadow: inset 0px 0px var(--size-inset-shadow) var(--color-inset-shadow);
    padding: 15px 30px;
    font-weight: 700;
    user-select: none;

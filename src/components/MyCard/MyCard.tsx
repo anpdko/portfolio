@@ -13,6 +13,13 @@ const MyCard = () => {
    const { t } = useTranslation();
    const cardRef = useGsapFrom({ opacity: 0, x: -100 });
 
+   const handleCopyClick = async (text: string) => {
+      if (text.length && navigator.clipboard) {
+         await navigator.clipboard.writeText(text)
+         alert('Copy email to clipboard')
+      }
+   }
+
    return (
       <div className={s.my_card} ref={cardRef}>
          <img className={s.avatar} src={fotoImg} alt="avatar" />
@@ -28,17 +35,25 @@ const MyCard = () => {
             </li>
          </ul>
          <ul className={s.list_social}>
-            <li className={s.icon}>
-               <div className={s.telegram}><img src={telegramImg} alt="T" /></div>
+            <li>
+               <a href='https://t.me/anpdko' target="_blank" rel="noreferrer">
+                  <div className={`${s.icon} ${s.telegram}`}><img src={telegramImg} alt="T" /></div>
+               </a>
             </li>
-            <li className={s.icon}>
-               <div className={s.git}><img src={gitImg} alt="G" /></div>
+            <li>
+               <a href='https://github.com/anpdko' target="_blank" rel="noreferrer">
+                  <div className={`${s.icon} ${s.git}`}><img src={gitImg} alt="G" /></div>
+               </a>
             </li>
-            <li className={s.icon}>
-               <div className={s.mail}><img src={mailImg} alt="M" /></div>
+            <li>
+               <div onClick={() => handleCopyClick('anpdko@gmail.com')}>
+                  <div className={`${s.icon} ${s.mail}`}><img src={mailImg} alt="M" /></div>
+               </div>
             </li>
-            <li className={s.icon}>
-               <div className={s.linkedin}><img src={linkedinImg} alt="L" /></div>
+            <li>
+               <a href='https://www.linkedin.com/in/andrii-pryadko-a897211b2' target="_blank" rel="noreferrer">
+                  <div className={`${s.icon} ${s.linkedin}`}><img src={linkedinImg} alt="L" /></div>
+               </a>
             </li>
          </ul>
       </div>

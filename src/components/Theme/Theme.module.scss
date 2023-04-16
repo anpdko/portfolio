@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   background: var(--color-box);
-  box-shadow: -1px 1px var(--size-shadow) var(--color-shadow);
+  box-shadow: -1px 1px var(--size-shadow) var(--color-shadow), inset 0px 0px var(--size-inset-shadow) var(--color-inset-shadow);
   border-radius: 99px;
 }
 

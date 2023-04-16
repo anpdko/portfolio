@@ -22,16 +22,40 @@ const TriangleElem = () => {
       <div className={s.box}>
          <div className={s.top}>
             <svg className={s.triangle} style={{ transform: `rotate(${angle1}deg)` }} viewBox="0 0 350 333" xmlns="http://www.w3.org/2000/svg">
-               <g filter="url(#filter0_d_20_5)">
-                  <path d="M113.169 45.9476C121.234 24.6947 149.085 19.7838 163.933 36.9964L312.095 208.757C327.299 226.382 317.511 253.855 294.589 257.896L65.9449 298.212C43.0224 302.254 24.4288 279.786 32.6873 258.024L113.169 45.9476Z" />
+               <g filter="url(#filter0_i_20_5)">
+                  <path d="M83.1686 19.9476C91.2339 -1.30531 119.085 -6.21624 133.933 10.9964L282.095 182.757C297.299 200.382 287.511 227.855 264.588 231.896L35.9448 272.212C13.0222 276.254 -5.57129 253.786 2.68717 232.024L83.1686 19.9476Z" />
                </g>
+               <defs>
+                  <filter id="filter0_i_20_5" x="0.691162" y="0.583228" width="288.717" height="272.104" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                     <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                     <feOffset />
+                     <feGaussianBlur stdDeviation="4" />
+                     <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_20_5" />
+                  </filter>
+               </defs>
             </svg>
          </div>
          <div className={s.bottom}>
-            <svg className={s.triangle} style={{ transform: `rotate(${-angle2}deg)` }} viewBox="0 0 350 333" xmlns="http://www.w3.org/2000/svg">
-               <g filter="url(#filter0_d_20_5)">
-                  <path d="M113.169 45.9476C121.234 24.6947 149.085 19.7838 163.933 36.9964L312.095 208.757C327.299 226.382 317.511 253.855 294.589 257.896L65.9449 298.212C43.0224 302.254 24.4288 279.786 32.6873 258.024L113.169 45.9476Z" />
+         <svg className={s.triangle} style={{ transform: `rotate(${angle2}deg)` }} viewBox="0 0 350 333" xmlns="http://www.w3.org/2000/svg">
+               <g filter="url(#filter0_i_20_5)">
+                  <path d="M83.1686 19.9476C91.2339 -1.30531 119.085 -6.21624 133.933 10.9964L282.095 182.757C297.299 200.382 287.511 227.855 264.588 231.896L35.9448 272.212C13.0222 276.254 -5.57129 253.786 2.68717 232.024L83.1686 19.9476Z" />
                </g>
+               <defs>
+                  <filter id="filter0_i_20_5" x="0.691162" y="0.583228" width="288.717" height="272.104" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                     <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                     <feOffset />
+                     <feGaussianBlur stdDeviation="4" />
+                     <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_20_5" />
+                  </filter>
+               </defs>
             </svg>
          </div>
       </div>

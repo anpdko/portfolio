@@ -10,6 +10,8 @@ import { useGsapFrom } from '../../hooks/useGsap'
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
 
+import resumePdf from '../../assets/files/Anreii_Pryadko_Frontend.pdf';
+
 
 const Home = () => {
    const { t } = useTranslation();
@@ -18,6 +20,15 @@ const Home = () => {
    const refHome = useGsapFrom({
       opacity: 0, y: 150 * directionScroll
    })
+
+   const handleDownload = () => {
+      const link = document.createElement('a');
+      link.href = resumePdf;
+      link.setAttribute('download', 'Anreii_Pryadko_Frontend.pdf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    };
 
    return (
       <div className={s.home} ref={refHome}>
@@ -34,7 +45,7 @@ const Home = () => {
          </h1>
          <p className='gray'>{t("Hi, I'm Andrii Priadko. A passionate Front-end React Developer based in Ukraine.")}<img src={ukImg} alt='UK' /></p>
          <div className={s.row}>
-            <Button>{t("Download CV")}</Button>
+            <Button onClick={handleDownload}>{t("Download CV")}</Button>
             <div className={s.stack_box}>
                <h4>{t("Stack MERN")}</h4>
                <span className={s.line}></span>
