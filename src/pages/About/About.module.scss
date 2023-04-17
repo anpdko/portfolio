@@ -6,9 +6,12 @@
    flex-direction: column;
    gap: 1.1rem;
 
+   h4{
+      white-space: nowrap;
+   }
+
    h3{
       max-width: 30rem;
-      white-space: nowrap;
    }
    p{
       text-align: justify;
@@ -51,6 +54,7 @@
       // }
       
       span{
+         white-space: nowrap;
          color: var(--color-gray);
          margin-right: 1rem;
       }
