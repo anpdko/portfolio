@@ -75,8 +75,8 @@ const About = () => {
       <div className={s.about} ref={refAbout}>
          <h4 className='blue'>{t("ABOUT ME")}</h4>
          <h3>{t("I love my job⚡")}</h3>
-         <p className='gray'>{t("Welcome to my portfolio website! I specialize in creating functional web applications using React.")}</p>
-         <p className='gray'>{t("Currently, I am looking for an opportunity to join a professional and friendly team. I am ready to work hard towards becoming a professional and achieving my goals. I hope you enjoy my work and see my experience and skills.")}</p>
+         <p className='gray'>{t("I am 23 years old. I have over 5 years of experience in programming, and for the last 2 years, I have specialized in creating functional web applications using React.")}</p>
+         <p className='gray'>{t("I am seeking an opportunity to join a professional and friendly team. I am willing to work hard towards becoming a Team Lead. Currently, I am involved in mentoring and I enjoy it a lot.")}</p>
          <h4 className="blue">{t("SKILLS")}</h4>
          <AboutSkills />
       </div>

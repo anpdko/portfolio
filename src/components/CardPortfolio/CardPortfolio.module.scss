@@ -37,7 +37,7 @@
       .technologies{
          display: flex;
          justify-content: center;
-         gap: 5px;
+         gap: 4px;
       }
 
       // .technologies > p:not(:last-child){
@@ -46,8 +46,8 @@
       // }
 
       .technologies > p:not(:last-child)::after{
-         content: '•';
-         margin-left: 5px;
+         content: ',';
+         margin-left: 1px;
       }
 
       .links{

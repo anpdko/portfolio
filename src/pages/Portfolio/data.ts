@@ -21,7 +21,7 @@ const portfolioData:IPortfolioCard[] = [
    {
       id: 0,
       title: 'Social Network',
-      description: 'Cоціальна мережа у якій можна додавати, лайкати, зберігати та коментувати пости з кодом. Підписуватись на людей. Всі картинки зберігаються на Google Disc.',
+      description: 'A social network where you can add, like, save, and comment on posts with code. You can also follow people. All images are stored on Google Drive.',
       technology: ['React', 'Redux', 'Express', 'Mongoose'],
       img: '',
       gif: grfSocialNetwork,
@@ -31,7 +31,7 @@ const portfolioData:IPortfolioCard[] = [
    {
       id: 1,
       title: 'Library-book MDPU',
-      description: 'Бібліотека книг університету. З можливістю легкого пошуку книги, перегляду та скачування. Є адмін-панель для бібліотекаря.',
+      description: 'The university library with easy book search, preview, and download options. There is an admin panel for the librarian.',
       technology: ['React', 'Redux', 'Express', 'Mongoose'],
       img: '',
       gif: gifLibraryBookMdpu,
@@ -41,7 +41,7 @@ const portfolioData:IPortfolioCard[] = [
    {
       id: 2,
       title: 'Coffee Roasters',
-      description: "Сайт лендінг для кав'ярні. Застосування різних анімацій при прокручуванні сторінки.",
+      description: "A landing website for a coffee shop. Different animations are applied while scrolling the page.",
       technology: ['HTML', 'SCC', 'JS', 'GSAP'],
       img: '',
       gif: gifCoffeeRoasters,
@@ -51,7 +51,7 @@ const portfolioData:IPortfolioCard[] = [
    {
       id: 3,
       title: 'Github Interview',
-      description: 'Тестове завдання, зроблене за один вечір. Застосовується більшість необхідних технологій на позицію React Development',
+      description: 'A test task done in one evening. Most of the necessary technologies for a React Development position are applied.',
       technology: ['React', 'SCSS', 'API'],
       img: '',
       gif: gifGithubInterview,
@@ -61,7 +61,7 @@ const portfolioData:IPortfolioCard[] = [
    {
       id: 4,
       title: 'Notepad',
-      description: 'Браузерні швидкі нотатки, зі зручним пошуком та фільтром по тегах. Авторизація відбувається за допомогою гугл акаунту. Без адаптиву під телефони',
+      description: 'Browser-based quick notes with convenient search and tag-based filtering. Authorization is done via Google account.',
       technology: ['React', 'SCSS', 'Firebase'],
       img: '',
       gif: gifNotepad,

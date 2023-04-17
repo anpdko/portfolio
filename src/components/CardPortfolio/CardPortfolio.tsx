@@ -1,21 +1,23 @@
 import React from 'react'
 import s from './CardPortfolio.module.scss'
 import { IPortfolioCard } from "../../pages/Portfolio/data";
+import { useTranslation } from 'react-i18next';
 
 interface ICardPortfolio {
    data: IPortfolioCard
 }
 
 const CardPortfolio = ({data}:ICardPortfolio) => {
+   const { t } = useTranslation();
 
    return (
       <div className={s.card_portfolio}>
          <div className={s.contant}>
             <h4>{data.title}</h4>
-            <p className='gray'>{data.description}</p>
+            <p className='gray'>{t(data.description)}</p>
             <div className={s.technologies}>
                {data.technology.map((item) =>
-                  <p key={item}>{item}</p>
+                  <p className='gray' key={item}>{item}</p>
                )}
             </div>
             <div className={s.links}>

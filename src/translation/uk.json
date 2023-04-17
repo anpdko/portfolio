@@ -8,9 +8,9 @@
    "Stack MERN":"Стек MERN",
 
    "ABOUT ME":"ПРО МЕНЕ",
-   "I love my job⚡":"Люблю свою рoботу⚡",
-   "Welcome to my portfolio website! I specialize in creating functional web applications using React.":"Вітаю на моєму сайті портфоліо! Я спеціалізуюся на створенні функціональних веб-застосунків на React.",
-   "Currently, I am looking for an opportunity to join a professional and friendly team. I am ready to work hard towards becoming a professional and achieving my goals. I hope you enjoy my work and see my experience and skills.":"Зараз я шукаю нагоду приєднатися до професійної та дружньої команди. Готовий багато працювати заради мети стати професіоналом. Я впевнений, що мої роботи вам сподобаються та продемонструють мій досвід та навички.",
+   "I love my job⚡":"Люблю свою справу⚡",
+   "I am 23 years old. I have over 5 years of experience in programming, and for the last 2 years, I have specialized in creating functional web applications using React.":"Мені 23 роки. Я маю досвід у программуванні більше 5 років, остані 2 роки спеціалізуюся на створенні функціональних веб-застосунків на React.",
+   "I am seeking an opportunity to join a professional and friendly team. I am willing to work hard towards becoming a Team Lead. Currently, I am involved in mentoring and I enjoy it a lot.":"Я шукаю нагоду приєднатися до професійної та дружньої команди. Готовий багато працювати заради мети стати Team Lead. Зараз займаюсь менторінгом и мені це дуже подобається.",
    "all":"всі",
    "web":"веб",
    "react":"react",
@@ -48,10 +48,16 @@
 
    "PORTFOLIO":"ПОРТФОЛІО",
    "Each project is a unique piece of development🧩":"Кожен проект – це унікальна розробка🧩",
+
+   "A social network where you can add, like, save, and comment on posts with code. You can also follow people. All images are stored on Google Drive.":"Cоціальна мережа у якій можна додавати, лайкати, зберігати та коментувати пости з кодом. Підписуватись на людей. Всі картинки зберігаються на Google Disc.",
+   "The university library with easy book search, preview, and download options. There is an admin panel for the librarian.":"Бібліотека книг університету. З можливістю легкого пошуку книги, перегляду та скачування. Є адмін-панель для бібліотекаря.",
+   "A landing website for a coffee shop. Different animations are applied while scrolling the page.":"Сайт лендінг для кав'ярні. Застосування різних анімацій при прокручуванні сторінки.",
+   "A test task done in one evening. Most of the necessary technologies for a React Development position are applied.":"Тестове завдання, зроблене за один вечір. Застосовується більшість необхідних технологій на позицію React Development.",
+   "Browser-based quick notes with convenient search and tag-based filtering. Authorization is done via Google account.":"Браузерні швидкі нотатки, зі зручним пошуком та фільтром по тегах. Авторизація відбувається за допомогою гугл акаунту.",
    
    "CONTACT":"КОНТАКТ",
    "Don't be shy! Hit me up!👇":"Звертайтесь до мене!👇",
-   "Your email address...":"Ваша електронна адреса",
+   "Your email address...":"Ваша електронна адреса...",
    "Write to me...":"Напишіть мені...",
    "Send letter":"Відправити письмо",
    "":"",

@@ -8,7 +8,7 @@ interface ITranslation {
   }
 
 const Translation = ({ className }:ITranslation) => {
-   const [language, setLanguage] = useLocalStorage('language', 'uk');
+   const [language, setLanguage] = useLocalStorage('language', 'en');
 
    const handleLenguageChange = () => {
       if (language === 'en') {
