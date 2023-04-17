@@ -27,7 +27,10 @@ const MyCard = () => {
          <ul className={s.list_info}>
             <li>
                <i className={`bi bi-geo-alt-fill ${s.bi_geo}`}></i>
-               <p className='gray'>{t("Ukraine. Zaporizhzhia. Ready to relocate")}</p>
+               <p className='gray'>
+                  <span>{t("Ukraine. Kyiv")}</span><br/>
+                  <span>{t("Ready to relocate")}</span>
+               </p>
             </li>
             <li>
                <i className={`bi bi-telephone-fill ${s.bi_telephone}`} ></i>
