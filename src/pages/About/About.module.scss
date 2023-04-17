@@ -8,6 +8,7 @@
 
    h3{
       max-width: 30rem;
+      white-space: nowrap;
    }
    p{
       text-align: justify;
@@ -27,6 +28,7 @@
          padding: 0.3rem 0.7rem;
          cursor: pointer;
          user-select: none;
+         white-space: nowrap;
       }
       span.active{
          background-color: var(--color-blue);
