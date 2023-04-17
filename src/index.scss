@@ -5,15 +5,16 @@
   --color-blue: #1877F2;
   --border-radius-main: 25px;
   --border-radius-small: 20px;
-  --size-shadow: 10px; //14px
+  --size-shadow: 14px; //14px
   --size-inset-shadow: 2px;
+  --filter-blur: 4px;
 }
 
 
 :root[data-theme="light"] {
   --color-background: #f1f2f7;  // #f6f7fc
   --color-box: #f7fafd;
-  --color-shadow: rgba(0, 0, 0, 0.25); // 0.2
+  --color-shadow: rgba(0, 0, 0, 0.2);
   --color-inset-shadow: rgba(0, 0, 0, 0.1);
   --color-gray: #616161;
   --color-font: #2D2E32;

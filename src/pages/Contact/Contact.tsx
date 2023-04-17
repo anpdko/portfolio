@@ -8,6 +8,8 @@ import { useGsapFrom } from '../../hooks/useGsap'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store/store';
 import emailjs from 'emailjs-com';
+import { useDispatch } from 'react-redux';
+import { setAlert } from '../../store/alert/alertSlice';
 
 
 const YOUR_SERVICE_ID = process.env.REACT_APP_YOUR_SERVICE_ID || '';
@@ -17,8 +19,10 @@ const YOUR_USER_ID = process.env.REACT_APP_YOUR_USER_ID || '';
 
 const SentMessage = () => {
    const { t } = useTranslation();
-   const [youEmail, setYouEmail] = useState('')
-   const [message, setMessage] = useState('')
+   const dispatch = useDispatch()
+   const [youEmail, setYouEmail] = useState<string>('')
+   const [message, setMessage] = useState<string>('')
+
 
    const placeholderEmail = t("Your email address...")
    const placeholderLetter = t("Write to me...")
@@ -43,13 +47,15 @@ const SentMessage = () => {
          emailjs.send(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, templateParams, YOUR_USER_ID)
          .then((res) => {
             console.log('SUCCESS!', res.status, res.text);
-            alert("SUCCESS!")
+            const testAlert = t("List successfully sent!")
+            dispatch(setAlert(testAlert))
          }, (error) => {
             console.log('FAILED...', error);
          });
       }
       else{
-         alert("Заполните поля!")
+         const testAlert = t("Fill in the fields!")
+         dispatch(setAlert(testAlert))
       }
    }
 

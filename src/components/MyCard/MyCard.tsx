@@ -7,16 +7,20 @@ import gitImg from '../../assets/images/icons/git.png'
 import telegramImg from '../../assets/images/icons/telegram.png'
 import linkedinImg from '../../assets/images/icons/linkedin.png'
 import { useGsapFrom } from '../../hooks/useGsap'
+import { useDispatch } from 'react-redux';
+import { setAlert } from '../../store/alert/alertSlice';
 
 
 const MyCard = () => {
    const { t } = useTranslation();
+   const dispatch = useDispatch()
    const cardRef = useGsapFrom({ opacity: 0, x: -100 });
 
    const handleCopyClick = async (text: string) => {
       if (text.length && navigator.clipboard) {
          await navigator.clipboard.writeText(text)
-         alert('Copy email to clipboard')
+         const testAlert = t("Email anpdko@gmail.com has been copied!")
+         dispatch(setAlert(testAlert))
       }
    }
 

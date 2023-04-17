@@ -4,8 +4,9 @@ import usePageScroll from '../hooks/usePageScroll'
 import { useDispatch } from "react-redux";
 import { setDirectionScroll } from "../store/gsap/gsapSlice";
 
+
 interface INavigateScroll {
-  arr: string[],
+  arrRoute: string[],
   power?: number,
   delay?: number,
   distance?: number,
@@ -13,7 +14,7 @@ interface INavigateScroll {
   setDirection?: any,
 }
 
-const NavigateScroll = ({ arr, power = 20, delay = 500, distance = 5, children }: INavigateScroll) => {
+const NavigateScroll = ({ arrRoute, power = 20, delay = 500, distance = 5, children }: INavigateScroll) => {
   const dispatch = useDispatch()
   const navigate = useNavigate();
   const pathname = useLocation().pathname;
@@ -28,19 +29,19 @@ const NavigateScroll = ({ arr, power = 20, delay = 500, distance = 5, children }
       const scrollHeight = document.documentElement.scrollHeight;
       const scrollBottom = window.innerHeight;
       if (diff > 0 && (scrollHeight - scrollBottom < 20 || isPageBottom)) {
-        for (let i = 0; i < arr.length - 1; i++) {
-          if (arr[i] === pathname) {
+        for (let i = 0; i < arrRoute.length - 1; i++) {
+          if (arrRoute[i] === pathname) {
             dispatch(setDirectionScroll(1))
-            navigate(arr[i + 1])
+            navigate(arrRoute[i + 1])
             document.documentElement.scrollTo(0, 0)
           }
         }
       }
       if (diff < 0 && isPageTop) {
-        for (let i = arr.length - 1; i > 0; i--) {
-          if (arr[i] === pathname) {
+        for (let i = arrRoute.length - 1; i > 0; i--) {
+          if (arrRoute[i] === pathname) {
             dispatch(setDirectionScroll(-1))
-            navigate(arr[i - 1])
+            navigate(arrRoute[i - 1])
             document.documentElement.scrollTo(0, 0)
           }
         }

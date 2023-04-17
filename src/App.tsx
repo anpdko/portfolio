@@ -13,13 +13,15 @@ import MenuMyCard from "./components/MenuMyCard/MenuMyCard";
 import Translation from './components/Translation/Translation';
 import Theme from './components/Theme/Theme';
 import TriangleElem from "./components/TriangleElem/TriangleElem";
+import Alert from "./components/UI/Alert/Alert";
 
 let arrRoute = ['/', '/about', '/portfolio', '/contact']
 
 function App() {
 
   return (
-    <NavigateScroll arr={arrRoute} power={20} >
+    <NavigateScroll arrRoute={arrRoute} power={20} >
+      <Alert/>
       <Routes>
         <Route path='/*' element={(
           <div className="container main_container">
