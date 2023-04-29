@@ -10,6 +10,8 @@
    gap: 1.1rem;
    align-items: center;
    justify-content: center;
+   backdrop-filter: blur(5px);
+   -webkit-backdrop-filter: blur(5px);
 
 
    .avatar {

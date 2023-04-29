@@ -6,8 +6,8 @@ const TriangleElem = () => {
    const [angle2, setAngle2] = useState(120)
 
    const handleScroll = (event: any) => {
-      setAngle1(angle1 + event.deltaY / 40)
-      setAngle2(angle2 + event.deltaY / 50)
+      setAngle1(angle1 + event.deltaY / 20)
+      setAngle2(angle2 + event.deltaY / 30)
    }
 
    useEffect(() => {

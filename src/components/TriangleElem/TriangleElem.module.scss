@@ -11,6 +11,8 @@
       right: 0;
       top: 0;
       transform: rotateX();
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
       .triangle{
          right: -6rem;
          top: -4rem;
@@ -26,6 +28,8 @@
       left: 0;
       bottom: 0;
       transform: rotateX();
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
       .triangle{
          left: -5rem;
          bottom: -3rem;

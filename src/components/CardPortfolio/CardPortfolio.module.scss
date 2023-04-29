@@ -8,6 +8,8 @@
    display: flex;
    gap: 30px;
    min-height: 15.5rem;
+   backdrop-filter: blur(5px);
+   -webkit-backdrop-filter: blur(5px);
 
    .box_img_site{
       flex: 1 0 50%;

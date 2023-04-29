@@ -14,6 +14,7 @@ import Translation from './components/Translation/Translation';
 import Theme from './components/Theme/Theme';
 import TriangleElem from "./components/TriangleElem/TriangleElem";
 import Alert from "./components/UI/Alert/Alert";
+import SnakeGame from "./components/SnakeGame/SnakeGame";
 
 let arrRoute = ['/', '/about', '/portfolio', '/contact']
 
@@ -26,6 +27,7 @@ function App() {
         <Route path='/*' element={(
           <div className="container main_container">
             <Navbar />
+            <SnakeGame/>
 
             <MenuBtn>
               <Translation/>
