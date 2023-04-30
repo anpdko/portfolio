@@ -1,0 +1,44 @@
+
+
+.start_mess{
+   position: fixed;
+   z-index: 50;
+   .cont{
+      background: var(--color-box);
+      box-shadow: -1px 0px var(--size-shadow) var(--color-shadow),
+      inset 0px 0px var(--size-inset-shadow) var(--color-inset-shadow);
+      border-radius: var(--border-radius-main);
+      padding: 1rem 1.5rem;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      transition: 1s;
+   
+      position: fixed;
+      justify-content: center;
+      z-index: 50;
+      top: 20px;
+      left: 0; 
+      right: 0; 
+      margin: 0 auto;
+      width: 300px;
+      display: flex;
+      gap: 40px;
+
+
+      .box{
+         display: flex;
+         align-items: center;
+         gap: 20px;
+
+         .img{
+            fill: var(--color-font);
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .start_mess{
+      display: none;
+   }
+}

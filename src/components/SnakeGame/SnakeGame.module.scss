@@ -12,7 +12,7 @@
       transition: 1s;
 
       .snake{
-         background-color: #2aa401;
+         background-color: #00a156; //#2aa401;
          border-radius: 20px;
          box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
          position: absolute;
@@ -24,7 +24,7 @@
       }
 
       .berry{
-         background-color: #ff3232;
+         background-color: #ff4a32;
          box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
          position: absolute;
          top: 0;

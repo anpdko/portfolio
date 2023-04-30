@@ -189,11 +189,10 @@ const SnakeGame = () => {
 
    return (
       <div className={s.back}>
-         <div className={s.map} style={{opacity: autoGame?0.12:0.5}}>
+         <div className={s.map} style={{opacity: autoGame?0.1:0.5}}>
             {snakeTails.map((elem, index) => 
                <div 
                   style={{
-                     background: '#2aa401',
                      width: SIZE + 'px',
                      height: SIZE + 'px',
                      left: elem.x + "px", 

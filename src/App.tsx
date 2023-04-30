@@ -15,6 +15,7 @@ import Theme from './components/Theme/Theme';
 import TriangleElem from "./components/TriangleElem/TriangleElem";
 import Alert from "./components/UI/Alert/Alert";
 import SnakeGame from "./components/SnakeGame/SnakeGame";
+import StartMessage from './components/StartMessage/StartMessage'
 
 let arrRoute = ['/', '/about', '/portfolio', '/contact']
 
@@ -28,6 +29,7 @@ function App() {
           <div className="container main_container">
             <Navbar />
             <SnakeGame/>
+            <StartMessage/>
 
             <MenuBtn>
               <Translation/>
