@@ -9,6 +9,8 @@
 
    .menu {
       background: var(--color-box);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       box-shadow: -1px 0px var(--size-shadow) var(--color-shadow), 
       inset 0px 0px var(--size-inset-shadow) var(--color-inset-shadow);
       border-radius: var(--border-radius-main);
