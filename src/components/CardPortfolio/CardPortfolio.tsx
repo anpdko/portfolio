@@ -32,6 +32,7 @@ const CardPortfolio = ({data}:ICardPortfolio) => {
             </div>
          </div>
          <div className={s.box_img_site}>
+
             <img className={s.img_site} src={data.gif} alt="site1" />
          </div>
       </div>

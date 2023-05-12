@@ -32,10 +32,16 @@
          cursor: pointer;
          user-select: none;
          white-space: nowrap;
+         transition: 0.1s;
       }
       span.active{
          background-color: var(--color-blue);
          color: #fff;
+      }
+
+      span:hover{
+         transform: scale(1.02);
+         box-shadow: 1px 0px calc(var(--size-shadow)/2) var(--color-shadow);
       }
    }
 

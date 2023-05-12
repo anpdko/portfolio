@@ -64,10 +64,15 @@
             color: var(--color-font);
             font-weight: 500;
             text-decoration: none;
-            
+            transition: 0.3s;
+
             span{
-               padding: 2px;
-               border-bottom: 2px solid var(--color-gray);
+               transition: 0.3s;
+            }
+            
+            span:hover{
+               color: var(--color-blue);
+               transform: scale(1.06);
             }
 
             i{
