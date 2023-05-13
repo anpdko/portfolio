@@ -14,6 +14,7 @@ function useGsapFrom(settings: IGsapSettings) {
       const box = boxRef.current;
       gsap.from(box, {
         duration: 0.8,
+        delay: 0.2,
         ease: Power3.easeInOut,
         ...settings
       });

@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
-import { useNavigate, useLocation } from 'react-router-dom'
-import usePageScroll from '../hooks/usePageScroll'
+import { useNavigate, useLocation } from 'react-router-dom';
+import usePageScroll from '../hooks/usePageScroll';
 import { useDispatch } from "react-redux";
 import { setDirectionScroll } from "../store/gsap/gsapSlice";
 
@@ -10,79 +10,62 @@ interface INavigateScroll {
   power?: number,
   delay?: number,
   distance?: number,
-  children: React.ReactNode
-  setDirection?: any,
+  children: React.ReactNode,
 }
 
 const NavigateScroll = ({ arrRoute, power = 20, delay = 500, distance = 5, children }: INavigateScroll) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const pathname = useLocation().pathname;
-  const pagesRef = useRef(null);
-  const [isPageTop, isPageBottom] = usePageScroll(distance)
-  const [isNavigate, setIsNavigate] = useState(false)
+  const { pathname } = useLocation();
+  const pagesRef = useRef<HTMLDivElement>(null);
+  const [isPageTop, isPageBottom] = usePageScroll(distance);
+  const [isNavigate, setIsNavigate] = useState(false);
 
-
-  const pagesScroll = (diff:number) => {
+  const pagesScroll = (diff: number) => {
     if (!isNavigate && Math.abs(diff) > power) {
-      setIsNavigate(true)
+      setIsNavigate(true);
       const scrollHeight = document.documentElement.scrollHeight;
       const scrollBottom = window.innerHeight;
+      const routeIndex = arrRoute.indexOf(pathname);
       if (diff > 0 && (scrollHeight - scrollBottom < 20 || isPageBottom)) {
-        for (let i = 0; i < arrRoute.length - 1; i++) {
-          if (arrRoute[i] === pathname) {
-            dispatch(setDirectionScroll(1))
-            navigate(arrRoute[i + 1])
-            document.documentElement.scrollTo(0, 0)
-          }
-        }
-      }
-      if (diff < 0 && isPageTop) {
-        for (let i = arrRoute.length - 1; i > 0; i--) {
-          if (arrRoute[i] === pathname) {
-            dispatch(setDirectionScroll(-1))
-            navigate(arrRoute[i - 1])
-            document.documentElement.scrollTo(0, 0)
-          }
-        }
+        dispatch(setDirectionScroll(1));
+        navigate(arrRoute[routeIndex + 1]);
+        document.documentElement.scrollTo(0, 0);
+      } else if (diff < 0 && isPageTop) {
+        dispatch(setDirectionScroll(-1));
+        navigate(arrRoute[routeIndex - 1]);
+        document.documentElement.scrollTo(0, 0);
       }
       setTimeout(() => {
         setIsNavigate(false);
       }, delay);
     }
-  }
+  };
 
-  function handleWheel(event: React.WheelEvent) {
-    // console.log(event.deltaY)
-    pagesScroll(event.deltaY)
-  }
-
-
+  const handleWheel = (event: React.WheelEvent<HTMLDivElement>) => {
+    pagesScroll(event.deltaY);
+  };
 
   let yDown: number | null = null;
 
-  // функция обработки начала свайпа
-  function handleTouchStart(event:React.TouchEvent) {
+  const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
     yDown = event.touches[0].clientY;
-  }
-  // функция обработки окончания свайпа
-  function handleTouchEnd() {
-    yDown = null;
-  }
+  };
 
-  function handleTouchMove(event:React.TouchEvent) {
+  const handleTouchEnd = () => {
+    yDown = null;
+  };
+
+  const handleTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
     if (!yDown) { return;}
-    let yUp = event.touches[0].clientY;
-    let yDiff = yDown - yUp;
-    console.log(yDiff)
+    const yUp = event.touches[0].clientY;
+    const yDiff = yDown - yUp;
     pagesScroll(yDiff);
-  }
+  };
 
   const handleScroll = () => {
     document.documentElement.scrollTo(0, 0);
-  }
-
-
+  };
 
   useEffect(() => {
     if (isNavigate) {
@@ -91,16 +74,15 @@ const NavigateScroll = ({ arrRoute, power = 20, delay = 500, distance = 5, child
 
       setTimeout(() => {
         window.removeEventListener('scroll', handleScroll);
-      }, 700)
+      }, 700);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname])
-
+  }, [pathname]);
 
   return (
     <div
       ref={pagesRef}
-      onWheel={handleWheel}
+      onWheelCapture={handleWheel}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}>
@@ -109,4 +91,5 @@ const NavigateScroll = ({ arrRoute, power = 20, delay = 500, distance = 5, child
     </div>
   );
 };
-export default NavigateScroll
+
+export default NavigateScroll;
