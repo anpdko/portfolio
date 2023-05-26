@@ -28,6 +28,15 @@ const SnakeGame = () => {
       return newBerry
    }
 
+   useEffect(() => {
+      if(autoGame === true) {
+         document.documentElement.dataset.color = "none"
+      }
+      else{
+         document.documentElement.dataset.color = 'mat'
+      }
+   }, [autoGame])
+
    const restart = () => {
       setSnakeTails(START_TAILS)
       setSnakeDirec(START_DIREC)
