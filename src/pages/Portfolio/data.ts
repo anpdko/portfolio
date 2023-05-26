@@ -3,6 +3,7 @@ import gifGithubInterview from '../../assets/images/project/github interview.gif
 import gifLibraryBookMdpu from '../../assets/images/project/library book mdpu.gif'
 import grfSocialNetwork from '../../assets/images/project/social network.gif'
 import gifNotepad from '../../assets/images/project/notepad react.gif'
+import gifSaasto from '../../assets/images/project/saasto.gif'
 // import grfEnglishThousandWords from '../../assets/images/project/english thousand words.gif'
 // import grfGames from '../../assets/images/project/games.gif'
 
@@ -27,6 +28,16 @@ const portfolioData:IPortfolioCard[] = [
       gif: grfSocialNetwork,
       link: 'https://sit-net.netlify.app/',
       github: 'https://github.com/anpdko/social-network-client'
+   },
+   {
+      id: 5,
+      title: 'SaaSto',
+      description: 'Website landing page for a mobile application. Gsap and svg animations were used.',
+      technology: ['React', 'SCSS', 'GSAP'],
+      img: '',
+      gif: gifSaasto,
+      link: 'https://saa-sto.netlify.app',
+      github: 'https://github.com/anpdko/saasto'
    },
    {
       id: 1,
@@ -55,8 +66,8 @@ const portfolioData:IPortfolioCard[] = [
       technology: ['React', 'SCSS', 'API'],
       img: '',
       gif: gifGithubInterview,
-      link: 'https://github.com/anpdko/github-interview-app',
-      github: 'https://dazzling-heliotrope-bc02a1.netlify.app/'
+      link: 'https://dazzling-heliotrope-bc02a1.netlify.app/',
+      github: 'https://github.com/anpdko/github-interview-app'
    },
    {
       id: 4,
@@ -80,7 +91,7 @@ const portfolioData:IPortfolioCard[] = [
    //    github: 'https://github.com/anpdko/games-site-html-css'
    // },
    // {
-   //    id: 5,
+   //    id: 6,
    //    title: 'English Thousand Words',
    //    description: 'Програма за один вечір для вивчення 1000 найпопулярніших слів в англійській мові. При виборі голос навчає слово. Голоси можна міняти.',
    //    technology: ['React', 'SCSS', 'Express', 'Mongoose'],
