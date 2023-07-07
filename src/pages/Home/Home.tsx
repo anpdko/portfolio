@@ -10,7 +10,7 @@ import { useGsapFrom } from '../../hooks/useGsap'
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
 
-import resumePdf from '../../assets/files/Anreii_Pryadko_Frontend.pdf';
+import resumePdf from '../../assets/files/Anreiy_Pryadko_Frontend.pdf';
 
 
 const Home = () => {

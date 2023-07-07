@@ -1,9 +1,11 @@
 import gifCoffeeRoasters from '../../assets/images/project/coffee roasters.gif'
 import gifGithubInterview from '../../assets/images/project/github interview.gif'
 import gifLibraryBookMdpu from '../../assets/images/project/library book mdpu.gif'
-import grfSocialNetwork from '../../assets/images/project/social network.gif'
-import gifNotepad from '../../assets/images/project/notepad react.gif'
+import gifSocialNetwork from '../../assets/images/project/social network.gif'
 import gifSaasto from '../../assets/images/project/saasto.gif'
+import gifVilnyy from '../../assets/images/project/vilnyy.gif'
+import gifSpace from '../../assets/images/project/space.gif'
+// import gifNotepad from '../../assets/images/project/notepad react.gif'
 // import grfEnglishThousandWords from '../../assets/images/project/english thousand words.gif'
 // import grfGames from '../../assets/images/project/games.gif'
 
@@ -25,9 +27,29 @@ const portfolioData:IPortfolioCard[] = [
       description: 'A social network where you can add, like, save, and comment on posts with code. You can also follow people. All images are stored on Google Drive.',
       technology: ['React', 'Redux', 'Express', 'Mongoose'],
       img: '',
-      gif: grfSocialNetwork,
+      gif: gifSocialNetwork,
       link: 'https://sit-net.netlify.app/',
       github: 'https://github.com/anpdko/social-network-client'
+   },
+   {
+      id: 7,
+      title: 'Organization Vilnyy',
+      description: 'Freelance product. Working with a designer. Helping young people realize their potential through the introduction of the idea of community life.',
+      technology: ['React', 'TypeScript', 'SCSS', 'GSAP'],
+      img: '',
+      gif: gifVilnyy,
+      link: 'https://vilnyy.netlify.app/',
+      github: 'https://github.com/anpdko/vilnyy'
+   },
+   {
+      id: 8,
+      title: 'Space-Tourism',
+      description: 'Pet project to explore new technologies Vue.js and Three.js. Space tourism multi-page 3D website.',
+      technology: ['Vue.js', 'Three.js', 'SCSS', 'GSAP'],
+      img: '',
+      gif: gifSpace,
+      link: '',
+      github: 'https://github.com/anpdko/space-vue-three'
    },
    {
       id: 5,
@@ -68,17 +90,17 @@ const portfolioData:IPortfolioCard[] = [
       gif: gifGithubInterview,
       link: 'https://dazzling-heliotrope-bc02a1.netlify.app/',
       github: 'https://github.com/anpdko/github-interview-app'
-   },
-   {
-      id: 4,
-      title: 'Notepad',
-      description: 'Browser-based quick notes with convenient search and tag-based filtering. Authorization is done via Google account.',
-      technology: ['React', 'SCSS', 'Firebase'],
-      img: '',
-      gif: gifNotepad,
-      link: 'https://ubiquitous-manatee-cde585.netlify.app/',
-      github: 'https://github.com/anpdko/notepad-react'
-   },
+   }
+   // {
+   //    id: 4,
+   //    title: 'Notepad',
+   //    description: 'Browser-based quick notes with convenient search and tag-based filtering. Authorization is done via Google account.',
+   //    technology: ['React', 'SCSS', 'Firebase'],
+   //    img: '',
+   //    gif: gifNotepad,
+   //    link: 'https://ubiquitous-manatee-cde585.netlify.app/',
+   //    github: 'https://github.com/anpdko/notepad-react'
+   // },
 
    // {
    //    id: 4,
