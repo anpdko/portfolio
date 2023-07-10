@@ -24,7 +24,7 @@ const ScrollNextPage = ({ children, id }: INavigateScroll) => {
     }, [inView, id])
 
    return (
-      <div ref = {ref}>
+      <div ref = {ref} style={{width: "100%"}}>
          {children}
       </div>
    );
