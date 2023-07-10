@@ -26,10 +26,16 @@
          width: 2rem;
          height: 2rem;
          list-style: none;
+         cursor: pointer;
+         mix-blend-mode: luminosity;
 
          img {
             width: 100%;
          }
+      }
+
+      li.active{
+         mix-blend-mode: normal;
       }
    }
 }

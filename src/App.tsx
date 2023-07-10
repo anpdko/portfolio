@@ -7,49 +7,62 @@ import Portfolio from "./pages/Portfolio/Portfolio";
 import Contact from "./pages/Contact/Contact";
 import Error from "./pages/Error/Error";
 import Navbar from "./components/Navbar/Navbar";
-import NavigateScroll from "./components/NavigateScroll";
+// import NavigateScroll from "./components/NavigateScroll";
 import MenuBtn from "./components/MenuBtn/MenuBtn";
 import MenuMyCard from "./components/MenuMyCard/MenuMyCard";
 import Translation from './components/Translation/Translation';
 import Theme from './components/Theme/Theme';
 import TriangleElem from "./components/TriangleElem/TriangleElem";
 import Alert from "./components/UI/Alert/Alert";
-import SnakeGame from "./components/SnakeGame/SnakeGame";
-import StartMessage from './components/StartMessage/StartMessage'
+import ScrollNextPage from "./components/ScrollNextPage";
+// import SnakeGame from "./components/SnakeGame/SnakeGame";
+// import StartMessage from './components/StartMessage/StartMessage'
 
-let arrRoute = ['/', '/about', '/portfolio', '/contact']
+// let arrRoute = ['/', '/about', '/portfolio', '/contact']
 
 function App() {
 
   return (
-    <NavigateScroll arrRoute={arrRoute} power={20} >
-      <Alert/>
+    <div className="App">
+      <Alert />
       <Routes>
         <Route path='/*' element={(
           <div className="container main_container">
             <Navbar />
-            <SnakeGame/>
-            <StartMessage/>
+            {/* <SnakeGame/>
+            <StartMessage/> */}
 
             <MenuBtn>
-              <Translation/>
-              <Theme/>
+              <Translation />
+              <Theme />
             </MenuBtn>
 
             <MenuMyCard>
               <MyCard />
             </MenuMyCard>
 
-            <TriangleElem/>
-            
+            <TriangleElem />
+
             <div className="page_box">
-              <div className="content_page_box">
-                <Routes>
-                  <Route path='/' element={<Home/>}/>
-                  <Route path='/about' element={<About/>}/>
-                  <Route path='/portfolio' element={<Portfolio/>}/>
-                  <Route path='/contact' element={<Contact/>} />
-                </Routes>
+              <div className="content_page_box" id="home">
+                <ScrollNextPage id="home">
+                  <Home />
+                </ScrollNextPage>
+              </div>
+              <div className="content_page_box" id="about">
+                <ScrollNextPage id="about">
+                  <About />
+                </ScrollNextPage>
+              </div>
+              <div className="content_page_box" id="portfolio">
+                <ScrollNextPage id="portfolio">
+                  <Portfolio />
+                </ScrollNextPage>
+              </div>
+              <div className="content_page_box" id="contact">
+                <ScrollNextPage id="contact">
+                  <Contact />
+                </ScrollNextPage>
               </div>
             </div>
           </div>
@@ -57,7 +70,7 @@ function App() {
         <Route path='/error' element={<Error />} />
         <Route path="*" element={<Navigate to={'/'} />} />
       </Routes>
-    </NavigateScroll>
+    </div>
   );
 }
 

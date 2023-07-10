@@ -22,11 +22,6 @@
   --color-scroll: #e6e6e6;
 }
 
-:root[data-theme="light"][data-color="mat"] {
-  --color-box: #f7fafd60;
-
-}
-
 :root[data-theme="dark"] {
   --color-background: #121318;
   --color-box: #1e1f25; // 1f2027
@@ -36,10 +31,6 @@
   --color-font: #ededed;
   --color-hi: #BEBEBE;
   --color-scroll: #292a33;
-}
-
-:root[data-theme="dark"][data-color="mat"] {
-  --color-box: #1e1f2510;
 }
 
 
@@ -99,13 +90,15 @@ code {
   min-height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 .content_page_box {
   padding: 100px 0;
   width: 100%;
-  min-height: 50vh;
+  box-sizing: border-box;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
