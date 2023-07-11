@@ -51,28 +51,20 @@
          white-space: nowrap;
          color: var(--color-gray);
          margin-right: 1rem;
-         font-size: 0.9rem;
-         display: flex;
-         flex-direction: column;
-         gap: 5px;
-         align-items: center;
-
-         img{
-            height: 1.2rem;
-         }
          
          .box_rating{
-            margin-bottom: 10px;
+            margin-top: 3px;
+            margin-bottom: 5px;
             width: 100%;
             height: 2px;
             border-radius: 10px;
-            border: 1px solid #06a700;
+            border: 1px solid #089938;
             opacity: 0.5;
 
             .rating{
                height: 2px;
                border-radius: 10px;
-               background-color: #00a700;
+               background-color: #089938;
             }
          }
       }

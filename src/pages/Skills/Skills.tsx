@@ -51,7 +51,6 @@ const Skills = () => {
                   layout
                   key={item.id}
                >
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="js" />
                   {t(item.name)}
                   <div className={s.box_rating}>
                      <div className={s.rating} style={{width: item.rating + "%"}}></div>
