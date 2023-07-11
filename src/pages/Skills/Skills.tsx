@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import s from './Skills.module.scss'
-import { listData, filterData } from './data';
+import { listData, filterData } from '../../data/skills';
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 
@@ -51,7 +51,11 @@ const Skills = () => {
                   layout
                   key={item.id}
                >
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="js" />
                   {t(item.name)}
+                  <div className={s.box_rating}>
+                     <div className={s.rating} style={{width: item.rating + "%"}}></div>
+                  </div>
                </motion.span>
             )}
          </motion.div>
