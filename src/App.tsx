@@ -15,6 +15,7 @@ import Theme from './components/Theme/Theme';
 import TriangleElem from "./components/TriangleElem/TriangleElem";
 import Alert from "./components/UI/Alert/Alert";
 import ScrollNextPage from "./components/ScrollNextPage";
+import Skills from './pages/Skills/Skills'
 // import SnakeGame from "./components/SnakeGame/SnakeGame";
 // import StartMessage from './components/StartMessage/StartMessage'
 
@@ -52,6 +53,11 @@ function App() {
               <div className="content_page_box" id="about">
                 <ScrollNextPage id="about">
                   <About />
+                </ScrollNextPage>
+              </div>
+              <div className="content_page_box" id="skills">
+                <ScrollNextPage id="skills">
+                  <Skills />
                 </ScrollNextPage>
               </div>
               <div className="content_page_box" id="portfolio">

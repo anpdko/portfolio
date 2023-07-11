@@ -2,6 +2,7 @@ import home from '../assets/images/icons/home.png'
 import about from '../assets/images/icons/about.png'
 import portfolio from '../assets/images/icons/portfolio.png'
 import contact from '../assets/images/icons/contact.png'
+import skill from '../assets/images/icons/skills.png'
 
 interface IItemNavigation {
    id: number
@@ -22,6 +23,12 @@ const navigation: IItemNavigation[] = [
       path: 'about',
       alt: "About",
       src: about
+   },
+   {
+      id: 5,
+      path: 'skills',
+      alt: "Skills",
+      src: skill
    },
    {
       id: 3,
