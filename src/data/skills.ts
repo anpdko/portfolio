@@ -5,6 +5,7 @@ export interface IListData {
    rating: number
 }
 
+
 const listData:IListData[] = [
    { id: 0, name: 'JavaScript', rating: 100},
    { id: 1, name: 'HTML', rating: 100},
