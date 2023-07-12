@@ -22,7 +22,7 @@ const Translation = ({ className }:ITranslation) => {
 
    return (
       <div onClick={handleLenguageChange} className={`${s.translation} ${className}`}>
-            {language === 'uk' ? 'EN' : 'UK'}
+            {language === 'uk' ? 'EN' : 'UA'}
       </div>
    );
 };

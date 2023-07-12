@@ -51,15 +51,15 @@
     width: 10px;
 
     &:hover {
-      background-color: var(--color-background);
-      box-shadow: 10px 0 0 -3.5px var(--color-background),
-        -10px 0 0 -3.5px var(--color-background),
-        0 -10px 0 -3.5px var(--color-background),
-        0 10px 0 -3.5px var(--color-background),
-        7px -7px 0 -3.5px var(--color-background),
-        7px 7px 0 -3.5px var(--color-background),
-        -7px 7px 0 -3.5px var(--color-background),
-        -7px -7px 0 -3.5px var(--color-background);
+      background-color: var(--color-box);
+      box-shadow: 10px 0 0 -3.5px var(--color-box),
+        -10px 0 0 -3.5px var(--color-box),
+        0 -10px 0 -3.5px var(--color-box),
+        0 10px 0 -3.5px var(--color-box),
+        7px -7px 0 -3.5px var(--color-box),
+        7px 7px 0 -3.5px var(--color-box),
+        -7px 7px 0 -3.5px var(--color-box),
+        -7px -7px 0 -3.5px var(--color-box);
     }
   }
 
@@ -76,14 +76,14 @@
       z-index: 1;
 
       &:hover {
-        background-color: var(--color-background);
+        background-color: var(--color-box);
       }
     }
 
     &:after {
       animation-duration: .5s;
       animation-name: moon-shadow;
-      background: var(--color-background);
+      background: var(--color-box);
       border-radius: 50%;
       content: "";
       display: block;
@@ -99,15 +99,15 @@
 
 @keyframes sun {
   from {
-    background-color: var(--color-background);
-    box-shadow: 0 0 0 -5px var(--color-background),
-      0 0 0 -5px var(--color-background),
-      0 0 0 -5px var(--color-background),
-      0 0 0 -5px var(--color-background),
-      0 0 0 -5px var(--color-background),
-      0 0 0 -5px var(--color-background),
-      0 0 0 -5px var(--color-background),
-      0 0 0 -5px var(--color-background);
+    background-color: var(--color-box);
+    box-shadow: 0 0 0 -5px var(--color-box),
+      0 0 0 -5px var(--color-box),
+      0 0 0 -5px var(--color-box),
+      0 0 0 -5px var(--color-box),
+      0 0 0 -5px var(--color-box),
+      0 0 0 -5px var(--color-box),
+      0 0 0 -5px var(--color-box),
+      0 0 0 -5px var(--color-box);
   }
 
   to {
@@ -141,7 +141,7 @@
 
 @keyframes moon-shadow {
   from {
-    background-color: var(--color-background);
+    background-color: var(--color-box);
     height: 0;
     right: 7px;
     top: 7px;
@@ -149,7 +149,7 @@
   }
 
   to {
-    background-color: var(--color-background);
+    background-color: var(--color-box);
     height: 18px;
     right: -2px;
     top: -2px;

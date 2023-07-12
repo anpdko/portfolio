@@ -49,8 +49,8 @@ export interface IFilterData {
 }
 
 const allListData = []
-for (let i = 0; i < listData.length; i++){
-   allListData.push(i)
+for (let item of listData){
+   allListData.push(item.id)
 }
 
 const filterData:IFilterData[] = [

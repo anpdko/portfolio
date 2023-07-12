@@ -16,8 +16,8 @@ import TriangleElem from "./components/TriangleElem/TriangleElem";
 import Alert from "./components/UI/Alert/Alert";
 import ScrollNextPage from "./components/ScrollNextPage";
 import Skills from './pages/Skills/Skills'
-// import SnakeGame from "./components/SnakeGame/SnakeGame";
-// import StartMessage from './components/StartMessage/StartMessage'
+import SnakeGame from "./components/SnakeGame/SnakeGame";
+import StartMessage from './components/StartMessage/StartMessage'
 
 // let arrRoute = ['/', '/about', '/portfolio', '/contact']
 
@@ -30,8 +30,8 @@ function App() {
         <Route path='/*' element={(
           <div className="container main_container">
             <Navbar />
-            {/* <SnakeGame/>
-            <StartMessage/> */}
+            <SnakeGame/>
+            <StartMessage/>
 
             <MenuBtn>
               <Translation />

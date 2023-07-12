@@ -20,7 +20,7 @@ const SnakeGame = () => {
    const [runGame, setRunGame] = useState(window.innerWidth > 860)
    const [berry, setBerry] = useState(START_BERRY)
 
-   const rundomBerry = () => {
+   const randomBerry = () => {
       const newBerry = {
          x: Math.floor(Math.random() * (widthCol - 1)) * SIZE,
          y: Math.floor(Math.random() * (heightCol - 1)) * SIZE
@@ -136,7 +136,7 @@ const SnakeGame = () => {
 
          // collision berry
          if (newTail.x === berry.x && newTail.y === berry.y) {
-            setBerry(rundomBerry())
+            setBerry(randomBerry())
             setSnakeTails([...snakeTails, newTail])
          }
          else {
@@ -154,7 +154,7 @@ const SnakeGame = () => {
    }, [game])
 
 
-   const keyDown = (event) => {
+   const keyDown = useCallback((event) => {
       setCountKey(countKey + 1)
       let key = event.key
       if ((key === 'w' || key === 'ArrowUp') && snakeDirec.dy !== SIZE) {
@@ -173,13 +173,14 @@ const SnakeGame = () => {
          setSnakeDirec({ dx: SIZE, dy: 0 })
          setAutoGame(false)
       }
-   }
+   }, [snakeDirec, setSnakeDirec, countKey, setAutoGame]);
+
    useEffect(() => {
       window.addEventListener('keydown', keyDown)
       return () => {
          window.removeEventListener('keydown', keyDown)
       }
-   })
+   }, [keyDown])
 
    // change resize window
    const resize = () => {
@@ -192,7 +193,7 @@ const SnakeGame = () => {
       return () => {
          window.removeEventListener('resize', resize)
       }
-   })
+   }, [])
 
    //setAutoGame after 3500 ms
    useEffect(() => {
