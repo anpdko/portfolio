@@ -10,7 +10,6 @@ const listData:IListData[] = [
    { id: 1, name: 'HTML', rating: 100},
    { id: 2, name: 'CSS', rating: 100},
    { id: 3, name: 'SCSS', rating: 100},
-   { id: 4, name: 'Responsive', rating: 100},
    { id: 5, name: 'TypeScript', rating: 95},
    { id: 6, name: 'React', rating: 100},
    { id: 7, name: 'Redux-toolkit', rating: 90},
@@ -21,7 +20,6 @@ const listData:IListData[] = [
    { id: 12, name: 'Three.js', rating: 75},
    { id: 13, name: 'Communicative', rating: 100},
    { id: 14, name: 'Team-oriented', rating: 100},
-   { id: 15, name: 'OOP', rating: 90},
    { id: 16, name: 'Git', rating: 90},
    { id: 17, name: 'Express.js', rating: 75},
    { id: 18, name: 'Postman', rating: 80},
@@ -56,11 +54,11 @@ for (let i = 0; i < listData.length; i++){
 
 const filterData:IFilterData[] = [
    { id: 0, title: 'all', list: allListData },
-   { id: 1, title: 'front-end', list: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 20] },
+   { id: 1, title: 'front-end', list: [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 20] },
    { id: 2, title: 'back-end', list: [17, 18, 19, 27, 28] },
    { id: 3, title: 'social', list: [13, 14, 21, 22] },
    { id: 4, title: 'design', list: [10, 24, 25] },
-   { id: 5, title: 'more', list: [15, 23, 26, 28, 29, 30, 31, 32] }
+   { id: 5, title: 'more', list: [23, 26, 28, 29, 30, 31, 32] }
 ]
 
 
