@@ -28,7 +28,7 @@ const Skills = () => {
    return (
       <div className={s.skills}>
          <h4 className="blue">{t("SKILLS")}</h4>
-
+         <h3>{t("My technologies💡")}</h3>
          <div className={s.filter_skills}>
             {filterData.map(item =>
                <span
