@@ -10,7 +10,7 @@ import { useGsapFrom } from '../../hooks/useGsap'
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
 
-import resumePdf from '../../assets/files/Anreiy_Pryadko_Frontend.pdf';
+import resumePdf from '../../assets/files/Andrii Priadko Front-end CV.pdf';
 
 
 const Home = () => {
@@ -24,7 +24,7 @@ const Home = () => {
    const handleDownload = () => {
       const link = document.createElement('a');
       link.href = resumePdf;
-      link.setAttribute('download', 'Anreii_Pryadko_Frontend.pdf');
+      link.setAttribute('download', 'Andrii Priadko Front-end CV.pdf');
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
